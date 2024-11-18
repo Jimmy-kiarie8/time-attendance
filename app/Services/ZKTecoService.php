@@ -42,7 +42,7 @@ class ZKTecoService
      *
      * @return array
      */
-    public function getAreas($queryParams = [], $perPage = 40, $page = 1)
+    public function getAreas($queryParams = [], $perPage = 150, $page = 1)
     {
         $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/areas/");
         // return $response->successful() ? $response->json() : $this->handleError($response);
@@ -77,7 +77,7 @@ class ZKTecoService
         return $response->successful() ? $response->json() : $this->handleError($response);
     }
 
-    public function getAreaData($queryParams = [], $perPage = 40, $page = 1)
+    public function getAreaData($queryParams = [], $perPage = 150, $page = 1)
     {
         $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/areas/");
 
@@ -98,7 +98,7 @@ class ZKTecoService
         return $transactions;
     }
 
-    public function getDepartmentData($queryParams = [], $perPage = 40, $page = 1)
+    public function getDepartmentData($queryParams = [], $perPage = 150, $page = 1)
     {
         $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/departments/");
 
@@ -121,7 +121,7 @@ class ZKTecoService
     }
 
 
-    public function getEmployeeData($queryParams = [], $perPage = 40, $page = 1)
+    public function getEmployeeData($queryParams = [], $perPage = 150, $page = 1)
     {
         $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/employees/");
 
@@ -148,7 +148,7 @@ class ZKTecoService
      *
      * @return array
      */
-    public function getEmployees($queryParams = [], $perPage = 40, $page = 1)
+    public function getEmployees($queryParams = [], $perPage = 150, $page = 1)
     {
 
         // return ['data' => []];
@@ -173,7 +173,7 @@ class ZKTecoService
     }
 
 
-    public function getDepartments($queryParams = [], $perPage = 40, $page = 1)
+    public function getDepartments($queryParams = [], $perPage = 150, $page = 1)
     {
         // return ['data' => []];
         $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/departments/");
@@ -237,7 +237,7 @@ class ZKTecoService
      * @param  array  $queryParams
      * @return array
      */
-    public function getAttendanceRecords($queryParams = [], $perPage = 40, $page = 1)
+    public function getAttendanceRecords($queryParams = [], $perPage = 150, $page = 1)
     {
         Log::error('Sending Attendance API request', [
             'url' => "{$this->baseUrl}/iclock/api/transactions/",
@@ -399,7 +399,7 @@ class ZKTecoService
      * @param  int  $employeeId
      * @return array
      */
-    public function getEmployeeAttendance(int $employeeId, $perPage = 40, $page = 1)
+    public function getEmployeeAttendance(int $employeeId, $perPage = 150, $page = 1)
     {
         $response = Http::withToken($this->token)->get("{$this->baseUrl}/iclock/api/transactions/{$employeeId}");
         // return $response->successful() ? $response->json() : $this->handleError($response);

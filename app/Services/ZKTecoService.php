@@ -37,7 +37,6 @@ class ZKTecoService
             throw new \Exception('Authentication failed.');
         }
     }
-
     /**
      * Get a list of areas.
      *

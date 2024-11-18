@@ -30,16 +30,6 @@
         "items": []
     },
     {
-        "label": "Department",
-        "model": "department",
-        "value": null,
-        "type": "select",
-        "display": true,
-        "table_display": true,
-        "col": 6,
-        "items": []
-    },
-    {
         "label": "Status",
         "model": "status",
         "value": null,

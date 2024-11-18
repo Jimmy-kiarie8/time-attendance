@@ -97,7 +97,7 @@ abstract class BaseController extends Controller
                 ];
             }
         }
-        $headers[] = ['title' => 'Actions', 'key' => 'actions'];
+        // $headers[] = ['title' => 'Actions', 'key' => 'actions'];
 
         $filterData = null;
         if ($this->canFilter) {

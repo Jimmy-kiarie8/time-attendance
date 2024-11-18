@@ -31,8 +31,8 @@ class EmployeeController extends BaseController
 
 
         $this->actions = [
-            ['action_name' => 'Sync', 'icon' => 'mdi-pencil', 'color' => 'primary', 'route' => 'sync-employee'],
-            ['action_name' => 'Delete', 'icon' => 'mdi-delete', 'color' => 'error', 'route' => 'loans'],
+            // ['action_name' => 'Sync', 'icon' => 'mdi-pencil', 'color' => 'primary', 'route' => 'sync-employee'],
+            // ['action_name' => 'Delete', 'icon' => 'mdi-delete', 'color' => 'error', 'route' => 'loans'],
         ];
     }
 

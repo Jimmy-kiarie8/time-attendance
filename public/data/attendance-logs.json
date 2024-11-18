@@ -104,8 +104,8 @@
         "value": "",
         "model": "status",
         "type": "text",
-        "display": true,
-        "table_display": true,
+        "display": false,
+        "table_display": false,
         "col": 12,
         "items": []
     },

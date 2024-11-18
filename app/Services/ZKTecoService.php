@@ -15,8 +15,8 @@ class ZKTecoService
     public function __construct()
     {
         $this->baseUrl = config('zkteco.base_url');
-        // $this->authenticate();
-        $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
+        $this->authenticate();
+        // $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
     }
 
     /**

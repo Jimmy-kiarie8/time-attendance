@@ -1,0 +1,42 @@
+[
+    {
+        "label": "shift_name",
+        "value": "",
+        "model": "shift_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "start_time",
+        "value": "",
+        "model": "start_time",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "end_time",
+        "value": "",
+        "model": "end_time",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "grace_period",
+        "value": "",
+        "model": "grace_period",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

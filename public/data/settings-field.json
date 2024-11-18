@@ -1,0 +1,135 @@
+[
+    {
+        "label": "Auto Order Number Generation",
+        "model": "auto_order_no_generation",
+        "value": false,
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Auto Assign Orders to Drivers",
+        "model": "auto_assign_orders",
+        "value": false,
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Enable Notifications",
+        "model": "enable_notifications",
+        "value": false,
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Default Delivery Time",
+        "model": "default_delivery_time",
+        "value": "",
+        "type": "time",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Enable SMS Notifications",
+        "model": "enable_sms_notifications",
+        "value": false,
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Enable Email Notifications",
+        "model": "enable_email_notifications",
+        "value": false,
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Enable Two-Factor Authentication",
+        "model": "enable_two_factor_auth",
+        "value": false,
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "label": "Maximum Number of Orders per Driver",
+        "model": "max_orders_per_driver",
+        "value": 20,
+        "type": "number",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Default Currency",
+        "model": "default_currency",
+        "value": "",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Functionality",
+        "model": "functionality",
+        "value": "Pickup&Delivery",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "multiple": false,
+        "col": 6,
+        "items": ["Pickup", "Delivery", "Pickup&Delivery"]
+    },
+    {
+        "label": "Tax",
+        "model": "tax",
+        "value": "No Tax",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "multiple": false,
+        "col": 6,
+        "items": ["Inclusive", "Exclusive", "No Tax"]
+    }
+]

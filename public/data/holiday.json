@@ -1,0 +1,22 @@
+[
+    {
+        "label": "holiday_date",
+        "value": "",
+        "model": "holiday_date",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "description",
+        "value": "",
+        "model": "description",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

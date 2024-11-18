@@ -1,0 +1,133 @@
+[
+    {
+      "title": "General Settings",
+      "description": "Configure general settings such as currency, date format, and language.",
+      "fields": [
+        { "label": "Currency", "type": "select", "value": "KES","model": "currency", "options": ["KES","USD", "EUR", "GBP"] },
+        { "label": "Date Format", "type": "select", "value": null,"model": "dateFormat", "options": ["Y-m-d", "Y/m/d", "d M Y"] },
+        { "label": "Time Zone", "type": "select", "value": null,"model": "timeZone", "options": ["EAT", "GMT", "EST", "PST"] },
+        { "label": "Language", "type": "select", "value": null,"model": "language", "options": ["English", "Spanish", "French"] }
+      ]
+    },
+    {
+      "title": "Loan Settings",
+      "description": "Set default loan configurations such as interest rates and repayment duration.",
+      "fields": [
+        { "label": "Default Interest Rate", "type": "number", "value": null,"model": "interestRate", "unit": "%" },
+        { "label": "Grace Period", "type": "number", "value": null,"model": "grace_period" },
+        { "label": "Loan Duration", "type": "select", "value": null,"model": "loanDuration", "options": ["12 months", "24 months", "36 months"] },
+        { "label": "Repayment Frequency", "type": "select", "value": null,"model": "repaymentFrequency", "options": ["Monthly", "Bi-Weekly", "Weekly"] },
+        { "label": "Late Payment Penalties", "type": "number", "value": null,"model": "latePaymentPenalty", "unit": "%" },
+        { "label": "Maximum Loan Amount", "type": "number", "value": null,"model": "maxLoanAmount", "unit": "USD" }
+      ]
+    },
+    {
+      "title": "Repayment Settings",
+      "description": "Manage repayment options and reminders.",
+      "fields": [
+        { "label": "Repayment Reminders", "type": "switch", "value": null,"model": "repaymentReminders" },
+        { "label": "Automatic Repayment", "type": "switch", "value": null,"model": "autoRepayment" },
+        { "label": "Partial Payment Allowance", "type": "switch", "value": null,"model": "partialPaymentAllowance" },
+        { "label": "Payment Methods", "type": "select", "value": null,"model": "paymentMethods", "options": ["Credit Card", "Bank Transfer", "Mobile Money"] }
+      ]
+    },
+    {
+      "title": "Interest Calculation",
+      "description": "Customize interest calculation methods.",
+      "fields": [
+        { "label": "Interest Calculation Method", "type": "select", "value": null,"model": "interestCalcMethod", "options": ["Daily", "Monthly", "Yearly"] },
+        { "label": "Compounding Interest", "type": "switch", "value": null,"model": "compoundingInterest" },
+        { "label": "Amortization Schedule", "type": "select", "value": null,"model": "amortizationSchedule", "options": ["Flat-Rate", "Reducing Balance"] }
+      ]
+    },
+    {
+      "title": "User Permissions & Roles",
+      "description": "Define user roles and access permissions.",
+      "fields": [
+        { "label": "Role Management", "type": "select", "value": null,"model": "roleManagement", "options": ["Admin", "Loan Officer", "Accountant"] },
+        { "label": "Data Access Control", "type": "switch", "value": null,"model": "dataAccessControl" }
+      ]
+    },
+    {
+      "title": "Notifications & Alerts",
+      "description": "Manage notifications and alert settings.",
+      "fields": [
+        { "label": "Email Notifications", "type": "switch", "value": null,"model": "emailNotifications" },
+        { "label": "SMS Notifications", "type": "switch", "value": null,"model": "smsNotifications" },
+        { "label": "Custom Alert Thresholds", "type": "number", "value": null,"model": "alertThreshold", "unit": "days" }
+      ]
+    },
+    {
+      "title": "Loan Approval Workflow",
+      "description": "Customize loan approval processes.",
+      "fields": [
+        { "label": "Auto-Approval Settings", "type": "switch", "value": null,"model": "autoApprovalAmount", "unit": "KES" },
+        { "label": "Approval Levels", "type": "select", "value": null,"model": "approvalLevels", "options": ["Single", "Double", "Triple"] },
+        { "label": "Required Documentation", "type": "select", "value": null,"model": "requiredDocuments", "options": ["ID Proof", "Bank Statement", "Pay Slip"] }
+      ]
+    },
+    {
+      "title": "Reports & Data Export",
+      "description": "Configure report generation and data export options.",
+      "fields": [
+        { "label": "Data Export Format", "type": "select", "value": null,"model": "exportFormat", "options": ["CSV", "PDF", "Excel"] },
+        { "label": "Automated Reports", "type": "switch", "value": null,"model": "automatedReports" },
+        { "label": "Customizable Report Fields", "type": "switch", "value": null,"model": "customReportFields" }
+      ]
+    },
+    {
+      "title": "Security Settings",
+      "description": "Manage application security features.",
+      "fields": [
+        { "label": "Two-Factor Authentication", "type": "switch", "value": null,"model": "twoFactorAuth" },
+        { "label": "Password Requirements", "type": "select", "value": null,"model": "passwordRequirements", "options": ["Strong", "Moderate", "Weak"] },
+        { "label": "Session Timeout", "type": "number", "value": null,"model": "sessionTimeout", "unit": "minutes" },
+        { "label": "IP Restrictions", "type": "switch", "value": null,"model": "ipRestrictions" }
+      ]
+    },
+    {
+      "title": "Custom Fields",
+      "description": "Add custom fields for loans and user profiles.",
+      "fields": [
+        { "label": "Custom Loan Fields", "type": "text", "value": null,"model": "customLoanFields" },
+        { "label": "Custom User Fields", "type": "text", "value": null,"model": "customUserFields" }
+      ]
+    },
+        {
+          "title": "Audit Trail",
+          "description": "Track changes and user activities across the system.",
+          "fields": [
+            { "label": "Enable Audit Trail", "type": "switch", "model": "enableAuditTrail" },
+            { "label": "Log Level", "type": "select", "model": "logLevel", "options": ["Error", "Warning", "Info", "Debug"] },
+            { "label": "Retention Period", "type": "number", "model": "retentionPeriod", "unit": "days" }
+          ]
+        },
+        {
+          "title": "Backup & Restore",
+          "description": "Manage data backups and restoration settings.",
+          "fields": [
+            { "label": "Automatic Backups", "type": "switch", "model": "automaticBackups" },
+            { "label": "Backup Frequency", "type": "select", "model": "backupFrequency", "options": ["Daily", "Weekly", "Monthly"] },
+            { "label": "Cloud Backup Provider", "type": "select", "model": "cloudBackupProvider", "options": ["AWS", "Google Cloud", "Azure"] }
+          ]
+        },
+        {
+          "title": "Client Communication",
+          "description": "Customize communication preferences for clients.",
+          "fields": [
+            { "label": "Preferred Communication Method", "type": "select", "model": "communicationMethod", "options": ["Email", "SMS", "Both"] },
+            { "label": "Allow Marketing Emails", "type": "switch", "model": "allowMarketingEmails" },
+            { "label": "Email Signature", "type": "text", "model": "emailSignature" }
+          ]
+        },
+        {
+          "title": "Tax & Compliance",
+          "description": "Set tax rules and compliance requirements.",
+          "fields": [
+            { "label": "Tax Rate", "type": "number", "model": "taxRate", "unit": "%" },
+            { "label": "Tax Identification Number", "type": "text", "model": "taxIdNumber" },
+            { "label": "Compliance Documents", "type": "select", "model": "complianceDocuments", "options": ["None", "KYC", "AML"] }
+          ]
+        }
+      ]
+

@@ -1,0 +1,53 @@
+[
+    {
+        "label": "Start Date",
+        "model": "start_date",
+        "value": "",
+        "type": "date",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "End Date",
+        "model": "end_date",
+        "value": "",
+        "type": "date",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Employee",
+        "model": "employee",
+        "value": null,
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Department",
+        "model": "department",
+        "value": null,
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Status",
+        "model": "status",
+        "value": null,
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": ["Late", "Absent", "On-time"]
+    }
+]
+

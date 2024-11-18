@@ -1,0 +1,142 @@
+[
+    {
+        "label": "Employee code",
+        "value": "",
+        "model": "emp_code",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "First name",
+        "value": "",
+        "model": "first_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Last name",
+        "value": "",
+        "model": "last_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Department",
+        "value": "",
+        "model": "department.dept_name",
+        "type": "text",
+        "display": false,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Department",
+        "value": null,
+        "model": "department",
+        "type": "select",
+        "display": true,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Area",
+        "value": null,
+        "model": "area.area_name",
+        "type": "text",
+        "display": false,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Area",
+        "value": null,
+        "model": "area",
+        "type": "select",
+        "display": true,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Hire date",
+        "value": "",
+        "model": "hire_date",
+        "type": "date",
+        "display": false,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Gender",
+        "value": null,
+        "model": "gender",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": ["S","F", "M"]
+    },
+    {
+        "label": "National",
+        "value": "",
+        "model": "national",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Address",
+        "value": "",
+        "model": "address",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Email",
+        "value": "",
+        "model": "email",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Position",
+        "value": "",
+        "model": "position.position_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "App status",
+        "value": "",
+        "model": "app_status",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    }
+]

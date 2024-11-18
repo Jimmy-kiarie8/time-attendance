@@ -1,0 +1,36 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "msg": "",
+    "code": 0,
+    "data": [
+        {
+            "id": 3,
+            "sn": "BAY5242300119",
+            "ip_address": "192.168.1.201",
+            "alias": "Auto add",
+            "terminal_name": "F18",
+            "fw_ver": "Ver 8.0.4.6-20220919",
+            "push_ver": "Ver 2.0.33S-20220623",
+            "state": "1",
+            "terminal_tz": 3,
+            "area": {
+                "id": 2,
+                "area_code": "2",
+                "area_name": "Office"
+            },
+            "last_activity": "2024-11-14 17:37:40",
+            "user_count": 1,
+            "fp_count": 1,
+            "face_count": 0,
+            "palm_count": 0,
+            "transaction_count": 7,
+            "push_time": "2024-11-14 17:22:09",
+            "transfer_time": "00:00;14:05",
+            "transfer_interval": 1,
+            "is_attendance": 1,
+            "area_name": "Office"
+        }
+    ]
+}

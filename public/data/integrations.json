@@ -1,0 +1,119 @@
+[
+    {
+        "title": "SMS Integration",
+        "description": "Configure general settings such as currency, date format, and language.",
+        "fields": [
+            {
+                "label": "Name",
+                "type": "name",
+                "value": "",
+                "model": "name",
+                "options": []
+            },
+            {
+                "label": "Provider",
+                "type": "select",
+                "value": null,
+                "model": "provider",
+                "options": ["Africas Talking", "Advanta", "TextSms"]
+            },
+            {
+                "label": "API Key",
+                "type": "text",
+                "value": null,
+                "model": "api_key",
+                "options": []
+            },
+            {
+                "label": "Sender ID",
+                "type": "text",
+                "value": null,
+                "model": "sender_id",
+                "options": []
+            },
+            {
+                "label": "Default",
+                "type": "switch",
+                "value": null,
+                "model": "is_default",
+                "options": []
+            }
+        ]
+    },
+    {
+        "title": "Email Integration",
+        "description": "Set default loan configurations such as interest rates and repayment duration.",
+        "fields": [
+            {
+                "label": "Name",
+                "type": "name",
+                "value": "",
+                "model": "name",
+                "options": []
+            },
+            {
+                "label": "Provider",
+                "type": "select",
+                "value": null,
+                "model": "provider",
+                "options": ["Zoho", "Gsuit", "Imap", "POP"]
+            },
+            {
+                "label": "Host",
+                "type": "text",
+                "value": null,
+                "model": "host",
+                "options": []
+            },
+            {
+                "label": "Port",
+                "type": "text",
+                "value": null,
+                "model": "port",
+                "options": []
+            },
+            {
+                "label": "User Name",
+                "type": "switch",
+                "value": null,
+                "model": "username",
+                "options": []
+            },
+            {
+                "label": "Password",
+                "type": "text",
+                "value": "",
+                "model": "password",
+                "options": []
+            },
+            {
+                "label": "Encryption",
+                "type": "select",
+                "value": null,
+                "model": "encryption",
+                "options": ["tls", "ssl"]
+            },
+            {
+                "label": "From Address",
+                "type": "text",
+                "value": null,
+                "model": "from_address",
+                "options": []
+            },
+            {
+                "label": "From Name",
+                "type": "text",
+                "value": null,
+                "model": "from_name",
+                "options": []
+            },
+            {
+                "label": "Additional Settings",
+                "type": "switch",
+                "value": null,
+                "model": "additional_settings",
+                "options": []
+            }
+        ]
+    }
+]

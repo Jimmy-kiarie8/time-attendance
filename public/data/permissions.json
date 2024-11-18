@@ -1,0 +1,12 @@
+[
+    {
+        "label": "Name",
+        "value": "",
+        "model": "name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

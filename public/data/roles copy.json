@@ -1,0 +1,23 @@
+[
+    {
+        "label": "Name",
+        "value": "",
+        "model": "name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Permission",
+        "value": null,
+        "model": "permission_id",
+        "type": "select",
+        "display": true,
+        "multiple": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

@@ -1,0 +1,55 @@
+[
+    {
+        "label": "Report Type",
+        "value": null,
+        "model": "report_type",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "multiple": false,
+        "col": 6,
+        "items": [
+            {
+                "label": "Attendance Report",
+                "value": "attendance"
+            },
+            {
+                "label": "On-Time Performance Report",
+                "value": "workingHours"
+            }
+        ]
+    },
+    {
+        "label": "Employee",
+        "value": null,
+        "model": "employee",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "multiple": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Start Date",
+        "value": "",
+        "model": "start_date",
+        "type": "date",
+        "display": true,
+        "table_display": true,
+        "multiple": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "End Date",
+        "value": "",
+        "model": "end_date",
+        "type": "date",
+        "display": true,
+        "table_display": true,
+        "multiple": false,
+        "col": 6,
+        "items": []
+    }
+]

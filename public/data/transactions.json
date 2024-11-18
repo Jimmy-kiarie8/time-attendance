@@ -1,0 +1,132 @@
+[
+    {
+        "label": "Bill Ref Number",
+        "value": "",
+        "model": "BillRefNumber",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Transaction",
+        "value": "",
+        "model": "transaction",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Transaction Type",
+        "value": "",
+        "model": "TransactionType",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Transaction Id",
+        "value": "",
+        "model": "TransID",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Trans Time",
+        "value": "",
+        "model": "TransTime",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Amount",
+        "value": "",
+        "model": "TransAmount",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Business ShortCode",
+        "value": "",
+        "model": "BusinessShortCode",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Invoice Number",
+        "value": "",
+        "model": "InvoiceNumber",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Overpaid Amount",
+        "value": "",
+        "model": "overpayment_amount",
+        "type": "text",
+        "display": false,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Org Account Balance",
+        "value": "",
+        "model": "OrgAccountBalance",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "MSISDN",
+        "value": "",
+        "model": "MSISDN",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Name",
+        "value": "",
+        "model": "name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Code used",
+        "value": "",
+        "model": "code_used",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    }
+]

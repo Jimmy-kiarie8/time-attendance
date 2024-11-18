@@ -1,0 +1,72 @@
+[
+    {
+        "label": "Name",
+        "value": "",
+        "model": "name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Email",
+        "value": "",
+        "model": "email",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Phone No",
+        "value": "",
+        "model": "phone",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Address",
+        "value": "",
+        "model": "address",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Role",
+        "value": null,
+        "model": "role_id",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Password",
+        "value": "",
+        "model": "password",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "Active",
+        "value": "Yes",
+        "model": "active",
+        "type": "radio",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": ["Yes","No"]
+    }
+]

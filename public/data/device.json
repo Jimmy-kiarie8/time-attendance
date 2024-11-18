@@ -1,0 +1,32 @@
+[
+    {
+        "label": "device_name",
+        "value": "",
+        "model": "device_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "location",
+        "value": "",
+        "model": "location",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "ip_address",
+        "value": "",
+        "model": "ip_address",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

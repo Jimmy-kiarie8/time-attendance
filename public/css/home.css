@@ -1,0 +1,2517 @@
+.wd-rs-64d0cf11b05cd div.product-category .wd-entities-title,
+.wd-rs-64d0cf11b05cd .wd-nav-product-cat>li>a {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.wd-rs-647756326a3f8.wd-tabs .tabs-name {
+    font-size: 32px;
+    text-transform: none;
+}
+
+.wd-rs-647756326a3f8 .wd-nav.wd-nav-tabs .wd-nav-link {
+    text-transform: capitalize;
+}
+
+.wd-rs-64d49210f0d4a .wd-products-with-bg,
+.wd-rs-64d49210f0d4a .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+.wd-rs-64d4921ce09fd .wd-products-with-bg,
+.wd-rs-64d4921ce09fd .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+.wd-rs-64d49226d373d .wd-products-with-bg,
+.wd-rs-64d49226d373d .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+.wd-rs-64d4923742fde .wd-products-with-bg,
+.wd-rs-64d4923742fde .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+.wd-rs-64d4924045ee6 .wd-products-with-bg,
+.wd-rs-64d4924045ee6 .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+.wd-rs-64775666851dc.wd-info-box {
+    --ib-icon-sp: 15px;
+}
+
+.wd-rs-6477566bb4b24.wd-info-box {
+    --ib-icon-sp: 15px;
+    background-color: rgb(158, 158, 158);
+}
+
+.wd-rs-6477567039346.wd-info-box {
+    --ib-icon-sp: 15px;
+    background-color: rgb(158, 158, 158);
+}
+
+.wd-rs-64775674a6afb.wd-info-box {
+    --ib-icon-sp: 15px;
+}
+
+.wd-rs-64775678c6505.wd-info-box {
+    --ib-icon-sp: 15px;
+    background-color: rgb(158, 158, 158);
+}
+
+.wd-rs-646f603ebb6cc .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-646f604ace688 .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-646f605049026 .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-64466da6887fa {
+    --wd-img-height: 185px;
+}
+
+.wd-rs-64760722ad644 .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-646f605b2c21e .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-64466ebd150d5 {
+    --wd-img-height: 185px;
+}
+
+.wd-rs-646f60679f2dd .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-646f606b6734f .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-646f6070d802b .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-64d4925c55813 .wd-products-with-bg,
+.wd-rs-64d4925c55813 .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+.wd-rs-647756e95d8eb .wd-image-hotspot {
+    --hotspot-primary: rgba(255, 255, 255, 0.3);
+}
+
+.wd-rs-6436b8d26e9e4.wd-list {
+    --li-mb: 10px;
+}
+
+.wd-rs-6475edd6619f8 .wd-el-video-play-btn {
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+}
+
+.wd-rs-6475edd6619f8 .wd-el-video-btn:hover .wd-el-video-play-btn,
+.wd-rs-6475edd6619f8.wd-action-overlay:hover .wd-el-video-play-btn {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.wd-rs-6477574f974d8>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+    justify-content: space-between
+}
+
+.wd-rs-64db9f0f844a5 {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-644675d1d5a17.wd-collapsible-content>.vc_column-inner {
+    max-height: 324px;
+}
+
+.wd-rs-644675d1d5a17.wd-collapsible-content:not(.wd-opened)>.vc_column-inner>.wpb_wrapper:after {
+    color: rgb(243, 242, 238);
+}
+
+@media (max-width: 1199px) {
+
+    .wd-rs-64d0cf11b05cd div.product-category .wd-entities-title,
+    .wd-rs-64d0cf11b05cd .wd-nav-product-cat>li>a {
+        font-size: 18px;
+    }
+
+    .wd-rs-647756326a3f8.wd-tabs .tabs-name {
+        font-size: 26px;
+    }
+
+    .wd-rs-644675d1d5a17.wd-collapsible-content>.vc_column-inner {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wd-rs-647756326a3f8.wd-tabs .tabs-name {
+        font-size: 22px;
+    }
+}
+
+#wd-6475e95b76ce8 .woodmart-title-container {
+    line-height: 42px;
+    font-size: 32px;
+}
+
+#wd-647756326a3f8.wd-tabs .wd-nav-tabs.wd-style-default li.wd-active a {
+    color: #f59a57;
+}
+
+#wd-647756326a3f8.wd-tabs .wd-nav-tabs.wd-style-default li:hover a {
+    color: #f59a57;
+}
+
+#wd-647756326a3f8.tabs-design-simple .tabs-name {
+    border-color: #f59a57 !important;
+}
+
+#wd-647756326a3f8.wd-tabs .wd-nav-tabs.wd-style-underline .nav-link-text:after {
+    background-color: #f59a57 !important;
+}
+
+#wd-6475e99a529fe .woodmart-title-container {
+    line-height: 42px;
+    font-size: 32px;
+}
+
+#wd-64775666851dc:after {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+#wd-64775666851dc .info-box-title {
+    line-height: 32px;
+    font-size: 22px;
+}
+
+#wd-6477566bb4b24:after {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+#wd-6477566bb4b24 .info-box-title {
+    line-height: 32px;
+    font-size: 22px;
+}
+
+#wd-6477567039346:after {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+#wd-6477567039346 .info-box-title {
+    line-height: 32px;
+    font-size: 22px;
+}
+
+#wd-64775674a6afb:after {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+#wd-64775674a6afb .info-box-title {
+    line-height: 32px;
+    font-size: 22px;
+}
+
+#wd-64775678c6505:after {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+#wd-64775678c6505 .info-box-title {
+    line-height: 32px;
+    font-size: 22px;
+}
+
+#wd-6475e9a43ecd4 .woodmart-title-container {
+    line-height: 42px;
+    font-size: 32px;
+}
+
+#wd-6475e9b636284 .woodmart-title-container {
+    line-height: 42px;
+    font-size: 32px;
+}
+
+#wd-6477570e8684b .woodmart-title-container {
+    line-height: 42px;
+    font-size: 32px;
+}
+
+#wd-64302d58e3dba .title-subtitle {
+    line-height: 28px;
+    font-size: 18px;
+}
+
+#wd-64db9f0f844a5 .woodmart-title-container {
+    line-height: 42px;
+    font-size: 32px;
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-6477564698e91 {
+        margin-bottom: 80px !important;
+    }
+
+    .website-wrapper .wd-rs-6477590b77e78 {
+        margin-bottom: 50px !important;
+    }
+
+    .website-wrapper .wd-rs-64775936770a9 {
+        margin-bottom: 70px !important;
+    }
+
+    .website-wrapper .wd-rs-6477567e3b684 {
+        margin-bottom: 60px !important;
+    }
+
+    .website-wrapper .wd-rs-6477569eb6731 {
+        margin-bottom: 60px !important;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+
+    .website-wrapper .wd-rs-64775a2e7ee54 {
+        margin-bottom: 60px !important;
+    }
+
+    .website-wrapper .wd-rs-647757267db0f {
+        margin-bottom: 80px !important;
+    }
+
+    .website-wrapper .wd-rs-64db9efed419d {
+        margin-bottom: 30px !important;
+    }
+
+    #wd-6475e95b76ce8 .woodmart-title-container {
+        line-height: 36px;
+        font-size: 26px;
+    }
+
+    #wd-6475e99a529fe .woodmart-title-container {
+        line-height: 36px;
+        font-size: 26px;
+    }
+
+    #wd-6475e9a43ecd4 .woodmart-title-container {
+        line-height: 36px;
+        font-size: 26px;
+    }
+
+    #wd-6475e9b636284 .woodmart-title-container {
+        line-height: 36px;
+        font-size: 26px;
+    }
+
+    .website-wrapper .wd-rs-64d4925c55813 {
+        margin-bottom: 20px !important;
+    }
+
+    #wd-6477570e8684b .woodmart-title-container {
+        line-height: 36px;
+        font-size: 26px;
+    }
+
+    #wd-64db9f0f844a5 .woodmart-title-container {
+        line-height: 36px;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .website-wrapper .wd-rs-6477564698e91 {
+        margin-bottom: 60px !important;
+    }
+
+    .website-wrapper .wd-rs-6477590b77e78 {
+        margin-bottom: 30px !important;
+    }
+
+    .website-wrapper .wd-rs-64775936770a9 {
+        margin-bottom: 50px !important;
+    }
+
+    .website-wrapper .wd-rs-6477567e3b684 {
+        margin-bottom: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6477569eb6731 {
+        margin-bottom: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-64775a2e7ee54 {
+        margin-bottom: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-647757267db0f {
+        margin-bottom: 60px !important;
+    }
+
+    .website-wrapper .wd-rs-64db9efed419d {
+        margin-bottom: 20px !important;
+    }
+
+    #wd-6475e95b76ce8 .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    #wd-6475e99a529fe .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    #wd-64775666851dc .info-box-title {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    #wd-6477566bb4b24 .info-box-title {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    #wd-6477567039346 .info-box-title {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    #wd-64775674a6afb .info-box-title {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    #wd-64775678c6505 .info-box-title {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    #wd-6475e9a43ecd4 .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    #wd-6475e9b636284 .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    .website-wrapper .wd-rs-64d4925c55813 {
+        margin-bottom: 40px !important;
+    }
+
+    #wd-6477570e8684b .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    #wd-64db9f0f844a5 .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+}
+
+
+
+.vc_custom_1685542479131 {
+    margin-top: -40px !important;
+    /* margin-bottom: 100px !important; */
+}
+
+.vc_custom_1685543188683 {
+    margin-bottom: 80px !important;
+}
+
+.vc_custom_1685543231402 {
+    margin-bottom: 80px !important;
+}
+
+.vc_custom_1685542534284 {
+    margin-right: -10px !important;
+    margin-bottom: 80px !important;
+    margin-left: -10px !important;
+}
+
+.vc_custom_1685542567356 {
+    margin-bottom: 80px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1685543476440 {
+    margin-bottom: 80px !important;
+}
+
+.vc_custom_1685542703678 {
+    margin-bottom: 100px !important;
+}
+
+.vc_custom_1692114672231 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1692114699221 {
+    margin-bottom: 50px !important;
+}
+
+.vc_custom_1680528317819 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1685449101590 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1691406109415 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1685542454386 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1685449122110 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1684938291522 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1684938281173 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1684938265037 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1684938248628 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1684938320552 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1685542506476 {
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 310px !important;
+    padding-left: 20px !important;
+}
+
+.vc_custom_1685542510758 {
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 310px !important;
+    padding-left: 20px !important;
+}
+
+.vc_custom_1685542515415 {
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 310px !important;
+    padding-left: 20px !important;
+}
+
+.vc_custom_1685542519675 {
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 310px !important;
+    padding-left: 20px !important;
+}
+
+.vc_custom_1685542524048 {
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 310px !important;
+    padding-left: 20px !important;
+}
+
+.vc_custom_1681389086678 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1681389091349 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1681389097026 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1681389101987 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1681389047907 {
+    padding-top: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1685020743951 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685020750824 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685020756090 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1682337466307 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685456687100 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685020766883 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1682337471333 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685020777910 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685020783346 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1685020789341 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1691652707787 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1685542637462 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1680877701837 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1680877706193 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1680877710811 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1685542672594 {
+    margin-bottom: 10px !important;
+}
+
+.vc_custom_1685542682569 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1681307948970 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1681307863333 {
+    margin-left: 10px !important;
+}
+
+.vc_custom_1685542709241 {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/05/wd-furniture-choosing-rules-video-1-opt.jpg?id=1586) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1681308035773 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1685450212145 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1692114707174 {
+    margin-bottom: 10px !important;
+}
+
+.vc_custom_1692114711585 {
+    margin-right: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+
+:root {
+    --wd-top-bar-h: 40px;
+    --wd-top-bar-sm-h: 0.001px;
+    --wd-top-bar-sticky-h: 0.001px;
+
+    --wd-header-general-h: 64px;
+    --wd-header-general-sm-h: 50px;
+    --wd-header-general-sticky-h: 60px;
+
+    --wd-header-bottom-h: 45px;
+    --wd-header-bottom-sm-h: 0.001px;
+    --wd-header-bottom-sticky-h: 45px;
+
+    --wd-header-clone-h: 0.001px;
+}
+
+.whb-top-bar .wd-dropdown {
+    margin-top: 0px;
+}
+
+.whb-top-bar .wd-dropdown:after {
+    height: 10px;
+}
+
+.whb-sticked .whb-general-header .wd-dropdown {
+    margin-top: 10px;
+}
+
+.whb-sticked .whb-general-header .wd-dropdown:after {
+    height: 20px;
+}
+
+.whb-header-bottom .wd-dropdown {
+    margin-top: 2.5px;
+}
+
+.whb-header-bottom .wd-dropdown:after {
+    height: 12.5px;
+}
+
+.whb-sticked .whb-header-bottom .wd-dropdown {
+    margin-top: 2.5px;
+}
+
+.whb-sticked .whb-header-bottom .wd-dropdown:after {
+    height: 12.5px;
+}
+
+.whb-header .whb-header-bottom .wd-header-cats {
+    margin-top: -0px;
+    margin-bottom: -0px;
+    height: calc(100% + 0px);
+}
+
+
+@media (min-width: 1025px) {
+    .whb-top-bar-inner {
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .whb-sticked .whb-top-bar-inner {
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .whb-general-header-inner {
+        height: 64px;
+        max-height: 64px;
+    }
+
+    .whb-sticked .whb-general-header-inner {
+        height: 60px;
+        max-height: 60px;
+    }
+
+    .whb-header-bottom-inner {
+        height: 45px;
+        max-height: 45px;
+    }
+
+    .whb-sticked .whb-header-bottom-inner {
+        height: 45px;
+        max-height: 45px;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+
+    .whb-general-header-inner {
+        height: 50px;
+        max-height: 50px;
+    }
+
+
+
+}
+
+.whb-30fubq3nvq576dnig92g .wd-info-box {
+    --ib-icon-sp: 10px;
+}
+
+.whb-30fubq3nvq576dnig92g .info-box-title {
+    color: rgba(36, 36, 36, 1);
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.whb-cnp9n8j9vd9piydx94j5 .wd-info-box {
+    --ib-icon-sp: 10px;
+}
+
+.whb-cnp9n8j9vd9piydx94j5 .info-box-title {
+    color: rgba(36, 36, 36, 1);
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.whb-top-bar {
+    background-color: rgba(16, 16, 16, 0.05);
+}
+
+.whb-3dr2urezpqgndfjlfa22 .searchform {
+    --wd-form-height: 42px;
+}
+
+.whb-row .whb-tu39rl1tsd8wpcxl7lnl.wd-tools-element .wd-tools-inner,
+.whb-row .whb-tu39rl1tsd8wpcxl7lnl.wd-tools-element>a>.wd-tools-icon {
+    color: rgba(16, 16, 16, 0.7);
+    background-color: rgba(16, 16, 16, 0.05);
+}
+
+.whb-row .whb-tu39rl1tsd8wpcxl7lnl.wd-tools-element:hover .wd-tools-inner,
+.whb-row .whb-tu39rl1tsd8wpcxl7lnl.wd-tools-element:hover>a>.wd-tools-icon {
+    color: rgba(16, 16, 16, 0.5);
+}
+
+.whb-row .whb-itc82qyu9f3s0tscappq.wd-tools-element .wd-tools-inner,
+.whb-row .whb-itc82qyu9f3s0tscappq.wd-tools-element>a>.wd-tools-icon {
+    color: rgba(16, 16, 16, 0.7);
+    background-color: rgba(16, 16, 16, 0.05);
+}
+
+.whb-row .whb-itc82qyu9f3s0tscappq.wd-tools-element:hover .wd-tools-inner,
+.whb-row .whb-itc82qyu9f3s0tscappq.wd-tools-element:hover>a>.wd-tools-icon {
+    color: rgba(16, 16, 16, 0.5);
+}
+
+.whb-row .whb-d3rr7l2o7d965a6qvawk.wd-tools-element .wd-tools-inner,
+.whb-row .whb-d3rr7l2o7d965a6qvawk.wd-tools-element>a>.wd-tools-icon {
+    color: rgba(16, 16, 16, 0.7);
+    background-color: rgba(16, 16, 16, 0.05);
+}
+
+.whb-row .whb-d3rr7l2o7d965a6qvawk.wd-tools-element:hover .wd-tools-inner,
+.whb-row .whb-d3rr7l2o7d965a6qvawk.wd-tools-element:hover>a>.wd-tools-icon {
+    color: rgba(16, 16, 16, 0.5);
+}
+
+.whb-row .whb-1tzj5wztzw6bwmvl2bt8.wd-tools-element .wd-tools-inner,
+.whb-row .whb-1tzj5wztzw6bwmvl2bt8.wd-tools-element>a>.wd-tools-icon {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(16, 16, 16, 1);
+}
+
+.whb-row .whb-1tzj5wztzw6bwmvl2bt8.wd-tools-element:hover .wd-tools-inner,
+.whb-row .whb-1tzj5wztzw6bwmvl2bt8.wd-tools-element:hover>a>.wd-tools-icon {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(36, 36, 36, 1);
+}
+
+.whb-general-header {
+    background-color: rgba(251, 250, 247, 1);
+}
+
+.whb-header-bottom {
+    background-color: rgba(251, 250, 247, 1);
+}
+
+
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "woodmart-font";
+    src: url("//woodmart.xtemos.com/furniture2/wp-content/themes/woodmart/fonts/woodmart-font-2-400.woff2?v=7.3.0") format("woff2");
+    font-display: swap;
+}
+
+:is(.shop-content-area.wd-builder-off, .wd-wishlist-content, .related-and-upsells, .cart-collaterals, .wd-shop-product) .wd-products-with-bg,
+:is(.shop-content-area.wd-builder-off, .wd-wishlist-content, .related-and-upsells, .cart-collaterals, .wd-shop-product) .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+:root {
+    --wd-cat-brd-radius: 50%;
+}
+
+.wd-popup.wd-promo-popup {
+    background-color: rgb(245, 154, 87);
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+}
+
+.page-title-default {
+    background-color: rgb(174, 182, 161);
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-pt-def-opt.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+
+.footer-container {
+    background-color: rgb(0, 0, 0);
+    background-image: none;
+}
+
+:root {
+    --wd-text-font: "Work Sans", Arial, Helvetica, sans-serif;
+    --wd-text-font-weight: 400;
+    --wd-text-color: #777777;
+    --wd-text-font-size: 15px;
+}
+
+:root {
+    --wd-title-font: "Urbanist", Arial, Helvetica, sans-serif;
+    --wd-title-font-weight: 700;
+    --wd-title-color: #242424;
+}
+
+:root {
+    --wd-entities-title-font: "Urbanist", Arial, Helvetica, sans-serif;
+    --wd-entities-title-font-weight: 700;
+    --wd-entities-title-color: #333333;
+    --wd-entities-title-color-hover: rgb(51 51 51 / 65%);
+}
+
+:root {
+    --wd-alternative-font: "Lato", Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --wd-widget-title-font: "Urbanist", Arial, Helvetica, sans-serif;
+    --wd-widget-title-font-weight: 700;
+    --wd-widget-title-transform: capitalize;
+    --wd-widget-title-color: #333;
+    --wd-widget-title-font-size: 16px;
+}
+
+:root {
+    --wd-header-el-font: "Urbanist", Arial, Helvetica, sans-serif;
+    --wd-header-el-font-weight: 600;
+    --wd-header-el-transform: capitalize;
+    --wd-header-el-font-size: 14px;
+}
+
+html .wd-nav-mobile>li>a {
+    text-transform: capitalize;
+}
+
+.whb-top-bar .wd-nav.wd-nav-secondary>li>a {
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+html .post.blog-post-loop .post-title {
+    font-size: 18px;
+}
+
+:root {
+    --wd-brd-radius: 10px;
+}
+
+:root {
+    --wd-primary-color: rgb(245, 154, 87);
+}
+
+:root {
+    --wd-alternative-color: rgb(224, 234, 240);
+}
+
+:root {
+    --wd-link-color: #333333;
+    --wd-link-color-hover: #242424;
+}
+
+.page .main-page-wrapper {
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-background.jpg);
+    background-repeat: repeat;
+}
+
+.woodmart-archive-shop:not(.single-product) .main-page-wrapper {
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-background.jpg);
+    background-repeat: repeat;
+}
+
+.single-product .main-page-wrapper {
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-background.jpg);
+    background-repeat: repeat;
+}
+
+.woodmart-archive-blog .main-page-wrapper {
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-background.jpg);
+    background-repeat: repeat;
+}
+
+.single-post .main-page-wrapper {
+    background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-background.jpg);
+    background-repeat: repeat;
+}
+
+:root {
+    --btn-default-transform: none;
+}
+
+:root {
+    --btn-default-bgcolor: rgb(247, 247, 247);
+}
+
+:root {
+    --btn-default-bgcolor-hover: rgb(239, 239, 239);
+}
+
+:root {
+    --btn-accented-bgcolor: rgb(245, 154, 87);
+}
+
+:root {
+    --btn-accented-bgcolor-hover: rgb(223, 140, 79);
+}
+
+:root {
+    --btn-transform: none;
+}
+
+html .wd-buy-now-btn {
+    color: rgb(255, 255, 255);
+    background: rgba(16, 16, 16, 0.9);
+}
+
+html .wd-buy-now-btn:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(51, 51, 51);
+}
+
+:root {
+    --notices-success-bg: #459647;
+}
+
+:root {
+    --notices-success-color: #fff;
+}
+
+:root {
+    --notices-warning-bg: #E0B252;
+}
+
+:root {
+    --notices-warning-color: #fff;
+}
+
+[class*="thumbs-grid-bottom"] .woocommerce-product-gallery__wrapper.wd-grid {
+    --wd-col: 2;
+}
+
+@media (max-width: 1024px) {
+    [class*="thumbs-grid-bottom"] .woocommerce-product-gallery__wrapper.wd-grid {
+        --wd-col: 2;
+    }
+}
+
+[class*="thumbs-grid-bottom"] .woocommerce-product-gallery__wrapper.wd-grid {
+    --wd-gap: 20px;
+}
+
+@media (max-width: 768.98px) {
+    [class*="thumbs-grid-bottom"] .woocommerce-product-gallery__wrapper.wd-grid {
+        --wd-gap: 10px;
+    }
+}
+
+
+:root {
+    --wd-form-brd-radius: 35px;
+
+
+
+    --wd-form-brd-width: 1px;
+
+    --btn-default-color: #333;
+
+    --btn-default-color-hover: #333;
+
+    --btn-accented-color: #fff;
+
+    --btn-accented-color-hover: #fff;
+
+
+
+    --btn-default-brd-radius: 35px;
+    --btn-default-box-shadow: none;
+    --btn-default-box-shadow-hover: none;
+
+
+
+
+    --btn-accented-brd-radius: 35px;
+    --btn-accented-box-shadow: none;
+    --btn-accented-box-shadow-hover: none;
+
+
+
+
+}
+
+
+
+:root {
+    --wd-container-w: 1400px;
+}
+
+@media (min-width: 1400px) {
+
+    [data-vc-full-width]:not([data-vc-stretch-content]),
+    :is(.vc_section, .vc_row).wd-section-stretch {
+        padding-left: calc((100vw - 1400px - var(--wd-sticky-nav-w) - var(--wd-scroll-w)) / 2);
+        padding-right: calc((100vw - 1400px - var(--wd-sticky-nav-w) - var(--wd-scroll-w)) / 2);
+    }
+}
+
+div.wd-popup.popup-quick-view {
+    max-width: 920px;
+}
+
+div.wd-popup.wd-promo-popup {
+    max-width: 480px;
+}
+
+
+
+.woodmart-woocommerce-layered-nav .wd-scroll-content {
+    max-height: 223px;
+}
+
+
+body,
+[class*=color-scheme-light],
+[class*=color-scheme-dark],
+.wd-search-form[class*="wd-header-search-form"] form.searchform,
+.wd-el-search .searchform {
+    overflow-x: hidden !important;
+
+    --wd-form-color: rgb(119, 119, 119);
+
+    --wd-form-placeholder-color: rgb(119, 119, 119)7;
+
+
+
+    --wd-form-bg: rgb(255, 255, 255);
+}
+
+.wd-custom-rounding {
+    border-radius: 200px !important;
+}
+
+.wpb_animate_when_almost_visible {
+    opacity: 1;
+}
+
+.woocommerce form .form-row .required {
+    visibility: visible;
+}
+
+.safe-svg-cover {
+    text-align: center
+}
+
+.safe-svg-cover .safe-svg-inside {
+    display: inline-block;
+    max-width: 100%
+}
+
+.safe-svg-cover svg {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%
+}
+
+.woocommerce-product-gallery {
+    opacity: 1 !important;
+}
+
+.vc_custom_1691406458966 {
+    padding-top: 50px !important;
+}
+
+.vc_custom_1691407109837 {
+    margin-bottom: 60px !important;
+}
+
+.vc_custom_1681125626490 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1681125631796 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1691407124753 {
+    margin-bottom: 56px !important;
+}
+
+.vc_custom_1681211791169 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1681211765017 {
+    margin-right: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1682340612682 {
+    margin-right: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+.wd-rs-64d0d22dd14c2>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+    justify-content: space-between
+}
+
+.wd-rs-64d0d3077370e.wd-social-icons .wd-label {
+    font-size: 22px;
+}
+
+.wd-rs-64d0d3077370e {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-6435416b44b74 {
+    --wd-brd-radius: 0px;
+}
+
+.wd-rs-64467a91482de {
+    --wd-brd-radius: 0px;
+}
+
+@media (max-width: 1199px) {
+    .wd-rs-64d0d3077370e.wd-social-icons .wd-label {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wd-rs-64d0d3077370e.wd-social-icons .wd-label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-64d0d2f83f8f4 {
+        margin-bottom: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-64d0d3077370e {
+        margin-bottom: 36px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .website-wrapper .wd-rs-64d0d2f83f8f4 {
+        margin-bottom: 20px !important;
+    }
+
+    .website-wrapper .wd-rs-64d0d3077370e {
+        margin-bottom: 16px !important;
+    }
+}
+
+#slider-30 .wd-slide {
+    min-height: 600px;
+}
+
+@media (min-width: 1025px) {
+    .browser-Internet #slider-30 .wd-slide {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #slider-30 .wd-slide {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+    #slider-30 .wd-slide {
+        min-height: 500px;
+    }
+}
+
+#slide-59.woodmart-loaded .wd-slide-bg {
+    /* background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-1-opt-1.jpg); */
+}
+
+#slide-59 .wd-slide-bg {
+    background-color: rgb(176, 179, 168);
+    background-size: cover;
+    background-position: center center;
+}
+
+#slide-59 .wd-slide-inner {
+    max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+
+    #slide-59 .wd-slide-inner {
+        max-width: 1200px;
+    }
+
+    #slide-59 .wd-slide-bg {
+
+        background-position: -120px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #slide-59 .wd-slide-inner {
+        max-width: 500px;
+    }
+
+    #slide-59 .wd-slide-bg {
+
+        background-position: -360px 0px;
+    }
+}
+
+.vc_custom_1681386434143 {
+    margin-bottom: 100px !important;
+    margin-left: 60px !important;
+}
+
+.vc_custom_1681386440066 {
+    margin-bottom: 40px !important;
+    margin-left: 60px !important;
+}
+
+.vc_custom_1681386446878 {
+    margin-left: 60px !important;
+}
+
+.vc_custom_1680607604895 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681384907161 {
+    margin-right: 10px !important;
+    margin-bottom: 5px !important;
+}
+
+.vc_custom_1684927924487 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1680607610069 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1684927932544 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684927940479 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684937435092 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684927947865 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1680607617074 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1684927961897 {
+    margin-bottom: 10px !important;
+}
+
+.wd-rs-642c097099982>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+.wd-rs-646df5accce58 {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-642c09765ca41>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+.wd-rs-642c097c3388d>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+#wd-6437e5c168593 .info-box-icon {
+    background-color: rgba(16, 16, 16, 0.1);
+}
+
+#wd-646df5accce58 {
+    --wd-max-width: 200px;
+}
+
+#wd-646df5accce58 .woodmart-title-container {
+    line-height: 28px;
+    font-size: 18px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df5b60de11.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df5be37abc.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df5c5d187a.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df5d358ff5.wd-text-block {
+    line-height: 44px;
+    font-size: 34px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-6437ebb5cc2f1 {
+        margin-left: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebc35cd57 {
+        margin-left: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebc9e854e {
+        margin-left: 40px !important;
+    }
+
+    #wd-646df5b60de11.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df5be37abc.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df5c5d187a.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df5d358ff5.wd-text-block {
+        line-height: 34px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .website-wrapper .wd-rs-6437ebb5cc2f1 {
+        margin-left: 24px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebc35cd57 {
+        margin-left: 24px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebc9e854e {
+        margin-left: 24px !important;
+    }
+
+    #wd-646df5b60de11.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df5be37abc.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df5c5d187a.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df5d358ff5.wd-text-block {
+        line-height: 32px;
+        font-size: 22px;
+    }
+}
+
+#slide-116.woodmart-loaded .wd-slide-bg {
+    /* background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-2-opt-1.jpg); */
+}
+
+#slide-116 .wd-slide-bg {
+    background-color: rgb(176, 179, 168);
+    background-size: cover;
+    background-position: center center;
+}
+
+#slide-116 .wd-slide-inner {
+    max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+
+    #slide-116 .wd-slide-inner {
+        max-width: 1200px;
+    }
+
+    #slide-116 .wd-slide-bg {
+
+        background-position: -120px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #slide-116 .wd-slide-inner {
+        max-width: 500px;
+    }
+
+    #slide-116 .wd-slide-bg {
+
+        background-position: -360px 0px;
+    }
+}
+
+.vc_custom_1681386465990 {
+    margin-bottom: 100px !important;
+    margin-left: 60px !important;
+}
+
+.vc_custom_1681386470939 {
+    margin-bottom: 40px !important;
+    margin-left: 60px !important;
+}
+
+.vc_custom_1681386476939 {
+    margin-left: 60px !important;
+}
+
+.vc_custom_1680607604895 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681385028246 {
+    margin-right: 10px !important;
+    margin-bottom: 5px !important;
+}
+
+.vc_custom_1684927995860 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1680607610069 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1684928004587 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684928011365 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684937125465 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684928018458 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1680607617074 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1684928028642 {
+    margin-bottom: 10px !important;
+}
+
+.wd-rs-642c097099982>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+.wd-rs-646df5f5a528e {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-642c09765ca41>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+.wd-rs-642c097c3388d>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+#wd-6437e63c90a32 .info-box-icon {
+    background-color: rgba(16, 16, 16, 0.1);
+}
+
+#wd-646df5f5a528e {
+    --wd-max-width: 200px;
+}
+
+#wd-646df5f5a528e .woodmart-title-container {
+    line-height: 28px;
+    font-size: 18px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df5fedb046.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df6061396c.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df60c9567e.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df61518331.wd-text-block {
+    line-height: 44px;
+    font-size: 34px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-6437ebde51b7d {
+        margin-left: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebe370286 {
+        margin-left: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebe872bd3 {
+        margin-left: 40px !important;
+    }
+
+    #wd-646df5fedb046.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df6061396c.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df60c9567e.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df61518331.wd-text-block {
+        line-height: 34px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .website-wrapper .wd-rs-6437ebde51b7d {
+        margin-left: 24px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebe370286 {
+        margin-left: 24px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebe872bd3 {
+        margin-left: 24px !important;
+    }
+
+    #wd-646df5fedb046.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df6061396c.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df60c9567e.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df61518331.wd-text-block {
+        line-height: 32px;
+        font-size: 22px;
+    }
+}
+
+#slide-121.woodmart-loaded .wd-slide-bg {
+    /* background-image: url(https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-3-opt-1.jpg); */
+}
+
+#slide-121 .wd-slide-bg {
+    background-color: rgb(176, 179, 168);
+    background-size: cover;
+    background-position: center center;
+}
+
+#slide-121 .wd-slide-inner {
+    max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+
+    #slide-121 .wd-slide-inner {
+        max-width: 1200px;
+    }
+
+    #slide-121 .wd-slide-bg {
+
+        background-position: -120px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #slide-121 .wd-slide-inner {
+        max-width: 500px;
+    }
+
+    #slide-121 .wd-slide-bg {
+
+        background-position: -360px 0px;
+    }
+}
+
+.vc_custom_1681386485287 {
+    margin-bottom: 100px !important;
+    margin-left: 60px !important;
+}
+
+.vc_custom_1681386490709 {
+    margin-bottom: 40px !important;
+    margin-left: 60px !important;
+}
+
+.vc_custom_1681386496198 {
+    margin-left: 60px !important;
+}
+
+.vc_custom_1680607604895 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681385135465 {
+    margin-right: 10px !important;
+    margin-bottom: 5px !important;
+}
+
+.vc_custom_1684928052352 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1680607610069 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1684928061116 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684928069131 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684937443174 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1684928079737 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1680607617074 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1684928086174 {
+    margin-bottom: 10px !important;
+}
+
+.wd-rs-642c097099982>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+.wd-rs-646df629a993f {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-642c09765ca41>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+.wd-rs-642c097c3388d>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+}
+
+#wd-6437e6a88eae9 .info-box-icon {
+    background-color: rgba(16, 16, 16, 0.1);
+}
+
+#wd-646df629a993f {
+    --wd-max-width: 200px;
+}
+
+#wd-646df629a993f .woodmart-title-container {
+    line-height: 28px;
+    font-size: 18px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df636d8780.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df63ee8619.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df64702ebc.wd-text-block {
+    line-height: 56px;
+    font-size: 46px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+#wd-646df65103fb5.wd-text-block {
+    line-height: 44px;
+    font-size: 34px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-6437ebf0d462e {
+        margin-left: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebf67acbd {
+        margin-left: 40px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebfca8d62 {
+        margin-left: 40px !important;
+    }
+
+    #wd-646df636d8780.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df63ee8619.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df64702ebc.wd-text-block {
+        line-height: 46px;
+        font-size: 36px;
+    }
+
+    #wd-646df65103fb5.wd-text-block {
+        line-height: 34px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .website-wrapper .wd-rs-6437ebf0d462e {
+        margin-left: 24px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebf67acbd {
+        margin-left: 24px !important;
+    }
+
+    .website-wrapper .wd-rs-6437ebfca8d62 {
+        margin-left: 24px !important;
+    }
+
+    #wd-646df636d8780.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df63ee8619.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df64702ebc.wd-text-block {
+        line-height: 38px;
+        font-size: 28px;
+    }
+
+    #wd-646df65103fb5.wd-text-block {
+        line-height: 32px;
+        font-size: 22px;
+    }
+}
+
+
+
+#shipping .fa-solid,
+#shipping .fa-regular {
+    font-size: 60px;
+    color: #000;
+}
+
+.product-grid-item :is(.product-image-link, .hover-img) img {
+    width: 100%;
+    height: 400px;
+}
+
+.main-page-wrapper {
+    padding-top: 0;
+}
+
+.wd-custom-rounding {
+    border-radius: 200px !important;
+}
+
+.vc_custom_1684937760913 {
+    margin-right: 10% !important;
+    margin-left: 10% !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background-image: url(https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-about-us-video-1.jpg?id=1323) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin-bottom: 30px;
+}
+
+.vc_custom_1681306554535 {
+    margin-bottom: 40px !important;
+}
+
+.vc_custom_1668169108705 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1674480219010 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1668170068200 {
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1668168942159 {
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1681826406387 {
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    background-color: #ffffff !important;
+}
+
+.vc_custom_1681306404923 {
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    background-color: #ffffff !important;
+}
+
+.vc_custom_1681306091221 {
+    padding-top: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    background-color: #ffffff !important;
+}
+
+.vc_custom_1668170675705 {
+    margin-right: 0px !important;
+    margin-bottom: 20px !important;
+    margin-left: -5px !important;
+    padding-top: 20px !important;
+    padding-right: 5px !important;
+    padding-bottom: 20px !important;
+    padding-left: 5px !important;
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1681305795950 {
+    margin-right: 0px !important;
+    margin-left: -5px !important;
+    padding-top: 20px !important;
+    padding-right: 5px !important;
+    padding-bottom: 20px !important;
+    padding-left: 5px !important;
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1645456482508 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1668169726583 {
+    margin-bottom: 10px !important;
+}
+
+.vc_custom_1668169695365 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1645456482508 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681305697687 {
+    margin-bottom: 10px !important;
+}
+
+.vc_custom_1681305782871 {
+    margin-bottom: 0px !important;
+}
+
+.wd-rs-6436b03d4006e {
+    --wd-brd-radius: 0px;
+}
+
+.wd-rs-6475f714f3710 .element-title {
+    font-size: 32px;
+}
+
+.wd-rs-6475f714f3710 .wd-products-with-bg,
+.wd-rs-6475f714f3710 .wd-products-with-bg .product-grid-item {
+    --wd-prod-bg: rgb(255, 255, 255);
+    --wd-bordered-bg: rgb(255, 255, 255);
+}
+
+@media (max-width: 1199px) {
+    .wd-rs-6475f714f3710 .element-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wd-rs-6475f714f3710 .element-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-636e3d91315f1>.vc_column-inner {
+        padding-right: 15px !important;
+    }
+
+    .website-wrapper .wd-rs-63ce8a5629e72>.vc_column-inner {
+        padding-left: 15px !important;
+    }
+
+    .website-wrapper .wd-rs-636e43af13313 {
+        margin-left: 0px !important;
+    }
+
+
+    .website-wrapper .wd-rs-6436b0bf80ab3 {
+        margin-left: 0px !important;
+    }
+}
+
+.vc_custom_1681734639173 {
+    margin-top: -40px !important;
+    background-color: #ffffff !important;
+}
+
+.vc_custom_1691655957488 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1645456972055 {
+    margin-bottom: 20px !important;
+}
+
+.wd-rs-64d49f08bd6a1 .login.hidden-form {
+    max-width: 470px;
+}
+
+.vc_custom_1681915153813 {
+    margin-bottom: -40px !important;
+    padding-bottom: 80px !important;
+    background-color: #ffffff !important;
+}
+
+.vc_custom_1681915080425 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681915381690 {
+    margin-bottom: 40px !important;
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681915090342 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681733747942 {
+    margin-right: 0px !important;
+    margin-bottom: 20px !important;
+    margin-left: 0px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1691657276974 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1691657287309 {
+    margin-bottom: 40px !important;
+}
+
+.vc_custom_1681733670186 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681733912804 {
+    margin-bottom: 0px !important;
+    padding-top: 5px !important;
+    padding-right: 15px !important;
+    padding-bottom: 5px !important;
+    padding-left: 15px !important;
+    background-color: #f59a57 !important;
+    border-radius: 20px !important;
+}
+
+.vc_custom_1681733894636 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1681915331191 {
+    margin-right: 0px !important;
+    margin-bottom: 20px !important;
+    margin-left: 0px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    background-color: rgba(16, 16, 16, 0.05) !important;
+    background-color: rgb(16, 16, 16) !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1681733414708 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1681733544545 {
+    margin-bottom: 20px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.vc_custom_1681915122890 {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    border-top-width: 1px !important;
+    border-right-width: 1px !important;
+    border-bottom-width: 1px !important;
+    border-left-width: 1px !important;
+    padding-top: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10px !important;
+    background-color: rgba(245, 154, 87, 0.1) !important;
+    background-color: rgb(245, 154, 87) !important;
+    border-left-color: rgba(245, 154, 87, 0.2) !important;
+    border-left-style: solid !important;
+    border-right-color: rgba(245, 154, 87, 0.2) !important;
+    border-right-style: solid !important;
+    border-top-color: rgba(245, 154, 87, 0.2) !important;
+    border-top-style: solid !important;
+    border-bottom-color: rgba(245, 154, 87, 0.2) !important;
+    border-bottom-style: solid !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1681733670186 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681733861187 {
+    margin-bottom: 0px !important;
+    padding-top: 5px !important;
+    padding-right: 14px !important;
+    padding-bottom: 5px !important;
+    padding-left: 14px !important;
+    background-color: #f59a57 !important;
+    border-radius: 20px !important;
+}
+
+.vc_custom_1681733779815 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1681733747942 {
+    margin-right: 0px !important;
+    margin-bottom: 20px !important;
+    margin-left: 0px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    background-color: rgba(16, 16, 16, 0.05) !important;
+    background-color: rgb(16, 16, 16) !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1681734145044 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1681733670186 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1681733929437 {
+    margin-bottom: 0px !important;
+    padding-top: 5px !important;
+    padding-right: 14px !important;
+    padding-bottom: 5px !important;
+    padding-left: 14px !important;
+    background-color: #f59a57 !important;
+    border-radius: 20px !important;
+}
+
+.vc_custom_1681733935587 {
+    margin-bottom: 0px !important;
+}
+
+.wd-rs-643d381612b46>.vc_column-inner>.wpb_wrapper {
+    align-items: center;
+    align-items: center;
+    align-items: center;
+}
+
+.wd-rs-643d390316502 {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-643d3889bb94a {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+.wd-rs-643d39f157486 .payment_box {
+    background-color: rgba(16, 16, 16, 0.03);
+}
+
+.wd-rs-643d39f157486 .payment_box:before {
+    color: rgba(16, 16, 16, 0.03);
+}
+
+.wd-rs-643d39f157486 .woocommerce-terms-and-conditions {
+    background-color: rgba(16, 16, 16, 0.03);
+}
+
+.wd-rs-643d392af2059 {
+    width: auto !important;
+    max-width: auto !important;
+}
+
+#wd-643d391355c92.wd-text-block {
+    line-height: 26px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#wd-643d390316502 .woodmart-title-container {
+    line-height: 34px;
+    font-size: 24px;
+}
+
+#wd-643d38dfb5cbe.wd-text-block {
+    line-height: 26px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#wd-643d3889bb94a .woodmart-title-container {
+    line-height: 34px;
+    font-size: 24px;
+}
+
+#wd-643d3925b9ab1.wd-text-block {
+    line-height: 26px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#wd-643d392af2059 .woodmart-title-container {
+    line-height: 34px;
+    font-size: 24px;
+}
+
+@media (max-width: 1199px) {
+    .website-wrapper .wd-rs-643ffd082180e {
+        padding-bottom: 60px !important;
+    }
+
+    .website-wrapper .wd-rs-643ffdee83457>.vc_column-inner {
+        margin-bottom: 10px !important;
+    }
+
+    #wd-643d390316502 .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    #wd-643d3889bb94a .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+
+    #wd-643d392af2059 .woodmart-title-container {
+        line-height: 32px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .website-wrapper .wd-rs-643ffd082180e {
+        padding-bottom: 40px !important;
+    }
+
+    #wd-643d390316502 .woodmart-title-container {
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    #wd-643d3889bb94a .woodmart-title-container {
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    #wd-643d392af2059 .woodmart-title-container {
+        line-height: 30px;
+        font-size: 20px;
+    }
+}
+
+
+.overlay-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000c2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #f00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    margin-top: 20%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading .spinner {
+    display: inline-block;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+.loading .spinner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: #df8c4f;
+    border-radius: 50%;
+}
+
+.loading .spinner::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    margin-left: -4px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.toast-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+img.profile {
+    border-radius: 50% !important;
+    width: 42px !important;
+}

@@ -1,0 +1,484 @@
+<?php
+
+namespace App\Services;
+
+use Carbon\Carbon;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
+
+class ZKTecoService
+{
+    protected $baseUrl;
+    protected $token;
+
+    public function __construct()
+    {
+        $this->baseUrl = config('zkteco.base_url');
+        // $this->authenticate();
+        $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
+    }
+
+    /**
+     * Authenticate and retrieve a JWT token.
+     */
+    protected function authenticate()
+    {
+        $response = Http::post("{$this->baseUrl}/jwt-api-token-auth/", [
+            'username' => config('zkteco.username'),
+            'password' => config('zkteco.password'),
+        ]);
+
+        if ($response->successful()) {
+            $this->token = $response->json('token');
+
+            // Log::alert($this->token);
+        } else {
+            throw new \Exception('Authentication failed.');
+        }
+    }
+
+    /**
+     * Get a list of areas.
+     *
+     * @return array
+     */
+    public function getAreas($queryParams = [], $perPage = 10, $page = 1)
+    {
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/areas/");
+        // return $response->successful() ? $response->json() : $this->handleError($response);
+
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+            $total = $response->json('count');  // Assuming API returns the total count of transactions
+
+            // Create a LengthAwarePaginator instance to paginate the data
+            return new LengthAwarePaginator(
+                array_slice($transactions, ($page - 1) * $perPage, $perPage), // Slice the data for current page
+                $total, // Total number of items (count from API)
+                $perPage, // Items per page
+                $page, // Current page
+                ['path' => url()->current()] // For pagination links
+            );
+        } else {
+            $this->handleError($response);
+        }
+    }
+
+    /**
+     * Create a new area.
+     *
+     * @param  array  $data
+     * @return array
+     */
+    public function createArea(array $data)
+    {
+        $response = Http::withToken($this->token)->post("{$this->baseUrl}/personnel/api/areas/", $data);
+        return $response->successful() ? $response->json() : $this->handleError($response);
+    }
+
+    public function getAreaData($queryParams = [], $perPage = 10, $page = 1)
+    {
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/areas/");
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+
+            // Modify the array to only include 'id', 'label', and 'value'
+            $transactions = array_map(function ($employee) {
+                return [
+                    'id' => $employee['id'],
+                    'area_code' => $employee['area_code'],
+                    'label' => $employee['area_name'],
+                    'value' => $employee['area_code']
+                ];
+            }, $transactions);
+        }
+
+        return $transactions;
+    }
+
+    public function getDepartmentData($queryParams = [], $perPage = 10, $page = 1)
+    {
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/departments/");
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+
+            // Modify the array to only include 'id', 'label', and 'value'
+            $transactions = array_map(function ($employee) {
+                return [
+                    'id' => $employee['dept_code'],
+                    'dept_code' => $employee['dept_code'],
+                    'name' => $employee['dept_name'],
+                    'label' => $employee['dept_name'],
+                    'value' => $employee['dept_code']
+                ];
+            }, $transactions);
+        }
+
+        return $transactions;
+    }
+
+
+    public function getEmployeeData($queryParams = [], $perPage = 10, $page = 1)
+    {
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/employees/");
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+
+            // Modify the array to only include 'id', 'label', and 'value'
+            $transactions = array_map(function ($employee) {
+                return [
+                    'id' => $employee['emp_code'],
+                    'emp_code' => $employee['id'],
+                    'name' => $employee['first_name'] . ' ' . $employee['last_name'],
+                    'label' => $employee['first_name'] . ' ' . $employee['last_name'],
+                    'value' => $employee['emp_code']
+                ];
+            }, $transactions);
+        }
+
+        return $transactions;
+    }
+
+    /**
+     * Get a list of employees.
+     *
+     * @return array
+     */
+    public function getEmployees($queryParams = [], $perPage = 10, $page = 1)
+    {
+
+        // return ['data' => []];
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/employees/");
+        // return $response->successful() ? $response->json() : $this->handleError($response);
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+            $total = $response->json('count');  // Assuming API returns the total count of transactions
+
+            // Create a LengthAwarePaginator instance to paginate the data
+            return new LengthAwarePaginator(
+                array_slice($transactions, ($page - 1) * $perPage, $perPage), // Slice the data for current page
+                $total, // Total number of items (count from API)
+                $perPage, // Items per page
+                $page, // Current page
+                ['path' => url()->current()] // For pagination links
+            );
+        } else {
+            $this->handleError($response);
+        }
+    }
+
+
+    public function getDepartments($queryParams = [], $perPage = 10, $page = 1)
+    {
+        // return ['data' => []];
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/departments/");
+        // return $response->successful() ? $response->json() : $this->handleError($response);
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+            $total = $response->json('count');  // Assuming API returns the total count of transactions
+
+            // Create a LengthAwarePaginator instance to paginate the data
+            return new LengthAwarePaginator(
+                array_slice($transactions, ($page - 1) * $perPage, $perPage), // Slice the data for current page
+                $total, // Total number of items (count from API)
+                $perPage, // Items per page
+                $page, // Current page
+                ['path' => url()->current()] // For pagination links
+            );
+        } else {
+            $this->handleError($response);
+        }
+    }
+
+    /**
+     * Create a new employee.
+     *
+     * @param  array  $data
+     * @return array
+     */
+    public function createEmployee(array $data)
+    {
+        try {
+            $response = Http::withToken($this->token)->post("{$this->baseUrl}/personnel/api/employees/", $data);
+            return $response->successful() ? $response->json() : $this->handleError($response);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    public function syncEmployee(array $data)
+    {
+        try {
+            $response = Http::withToken($this->token)->post("{$this->baseUrl}/personnel/api/employees/resync_to_device/", $data);
+            return $response->successful() ? $response->json() : $this->handleError($response);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    public function deleteBio(array $data)
+    {
+        try {
+            $response = Http::withToken($this->token)->post("{$this->baseUrl}/personnel/api/employees/del_bio_template/", $data);
+            return $response->successful() ? $response->json() : $this->handleError($response);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+    /**
+     * Get attendance records.
+     *
+     * @param  array  $queryParams
+     * @return array
+     */
+    public function getAttendanceRecords($queryParams = [], $perPage = 10, $page = 1)
+    {
+        Log::error('Sending Attendance API request', [
+            'url' => "{$this->baseUrl}/iclock/api/transactions/",
+            'queryParams' => $queryParams,
+        ]);
+
+        $allTransactions = [];
+        $nextUrl = null;
+
+        // Make initial request with query parameters
+        $response = Http::withToken($this->token)
+            ->get("{$this->baseUrl}/iclock/api/transactions/", $queryParams);
+
+        if (!$response->successful()) {
+            $this->handleError($response);
+            return;
+        }
+
+        // Process first page
+        $responseData = $response->json();
+        $allTransactions = $responseData['data'];
+        $nextUrl = $responseData['next'];
+
+        // Fetch remaining pages if they exist
+        while ($nextUrl) {
+            $response = Http::withToken($this->token)->get($nextUrl);
+
+            if (!$response->successful()) {
+                break;
+            }
+
+            $responseData = $response->json();
+            $allTransactions = array_merge($allTransactions, $responseData['data']);
+            $nextUrl = $responseData['next'];
+        }
+
+        Log::info('Total records fetched', ['count' => count($allTransactions)]);
+
+        $processedData = [];
+
+        // Group transactions by employee and date
+        $groupedTransactions = collect($allTransactions)->groupBy(function ($transaction) {
+            $date = Carbon::parse($transaction['punch_time'])->format('Y-m-d');
+            return $transaction['emp_code'] . '_' . $date;
+        });
+
+        foreach ($groupedTransactions as $key => $dayTransactions) {
+            [$empCode, $date] = explode('_', $key);
+            $dateCarbon = Carbon::parse($date);
+
+            // Sort transactions for this employee and date by punch time
+            $sortedTransactions = collect($dayTransactions)->sortBy('punch_time');
+
+            // Get first and last punch of the day
+            $firstPunch = $sortedTransactions->first();
+            $lastPunch = $sortedTransactions->last();
+
+            $checkInTime = $firstPunch ? Carbon::parse($firstPunch['punch_time']) : null;
+            $checkOutTime = ($lastPunch && $lastPunch['id'] !== $firstPunch['id'])
+                ? Carbon::parse($lastPunch['punch_time'])
+                : null;
+            $workedHours = null;
+            if ($checkInTime && $checkOutTime) {
+                $totalMinutes = $checkInTime->diffInMinutes($checkOutTime); // Get total minutes
+                $hours = intdiv($totalMinutes, 60); // Extract hours
+                $minutes = $totalMinutes % 60; // Extract remaining minutes
+
+                if ($hours > 0) {
+                    $workedHours = $hours . ' hr' . ($hours > 1 ? 's' : '') . ' ' . ($minutes > 0 ? $minutes . ' min' : '');
+                } else {
+                    $workedHours = $minutes . ' min';
+                }
+            }
+            // Determine check-in and check-out status
+            $checkinStatus = $checkInTime
+                ? ($checkInTime->format('H:i') <= '09:30' ? 'On time' : 'Late')
+                : 'Missing';
+
+            $checkoutStatus = $checkOutTime
+                ? ($checkOutTime->format('H:i') >= '17:00' ? 'On time' : 'Early')
+                : 'Missing';
+
+            // Create single record for the day
+            $dayRecord = [
+                'id' => $firstPunch['id'],
+                'emp_code' => $empCode,
+                'date' => $date,
+                'first_name' => $firstPunch['first_name'],
+                'last_name' => $firstPunch['last_name'],
+                'department' => $firstPunch['department'],
+                'position' => $firstPunch['position'],
+                'checkin_time' => $checkInTime ? $checkInTime->format('H:i:s') : null,
+                'checkout_time' => $checkOutTime ? $checkOutTime->format('H:i:s') : null,
+                'status' => $checkInTime ? ($checkOutTime ? 'Out' : 'In') : 'Absent',
+                'checkin_status' => $checkinStatus,
+                'checkout_status' => $checkoutStatus,
+                'worked_hours' => $workedHours ? $workedHours : null,
+            ];
+
+            $processedData[] = $dayRecord;
+        }
+
+        // Sort the processed data by date
+        $processedData = collect($processedData)
+            ->sortBy('date')
+            ->values()
+            ->all();
+
+        Log::info('Processed records', ['count' => count($processedData)]);
+
+        // Paginate the results
+        return new LengthAwarePaginator(
+            array_slice($processedData, ($page - 1) * $perPage, $perPage),
+            count($processedData),
+            $perPage,
+            $page,
+            ['path' => url()->current()]
+        );
+    }
+
+    public function generateReport(string $reportType, bool $export = false, $queryParams)
+    {
+        switch ($reportType) {
+            case 'attendance':
+                return $this->getAttendanceRecords($queryParams);
+            case 'LoanListing':
+                //
+            default:
+                throw new \InvalidArgumentException("Invalid report type: {$reportType}");
+        }
+    }
+
+
+    public function attendanceTrendsAnalysis(string $reportType, bool $export = false, $queryParams)
+    {
+        $attendances = $this->getAttendanceRecords($queryParams);
+        $trendData = [];
+
+        foreach ($attendances as $attendance) {
+            $status = $this->zkTecoService->getUserStatus($attendance);
+            $date = $attendance->date->format('Y-m-d');
+            if (!isset($trendData[$date])) {
+                $trendData[$date] = [
+                    'on_time' => 0,
+                    'late' => 0,
+                    'absent' => 0,
+                ];
+            }
+            $trendData[$date][$status]++;
+        }
+
+        return $trendData;
+    }
+
+
+    /**
+     * Retrieve a specific employee's attendance.
+     *
+     * @param  int  $employeeId
+     * @return array
+     */
+    public function getEmployeeAttendance(int $employeeId, $perPage = 10, $page = 1)
+    {
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/iclock/api/transactions/{$employeeId}");
+        // return $response->successful() ? $response->json() : $this->handleError($response);
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+            $total = $response->json('count');  // Assuming API returns the total count of transactions
+
+            // Create a LengthAwarePaginator instance to paginate the data
+            return new LengthAwarePaginator(
+                array_slice($transactions, ($page - 1) * $perPage, $perPage), // Slice the data for current page
+                $total, // Total number of items (count from API)
+                $perPage, // Items per page
+                $page, // Current page
+                ['path' => url()->current()] // For pagination links
+            );
+        } else {
+            $this->handleError($response);
+        }
+    }
+
+
+
+
+    /**
+     * Get user attendance status as on-time, late, or absent.
+     *
+     * @param  array  $attendanceRecords
+     * @param  string  $standardCheckInTime
+     * @return array
+     */
+    public function getUserStatus(array $attendanceRecords, string $standardCheckInTime = '09:00')
+    {
+        $statuses = [];
+        foreach ($attendanceRecords as $record) {
+            $userId = $record['user_id'];
+            $checkInTime = Carbon::parse($record['check_in_time']);
+            $standardTime = Carbon::createFromTimeString($standardCheckInTime);
+
+            if (!$checkInTime) {
+                $statuses[$userId] = 'absent';
+            } else {
+                $statuses[$userId] = $checkInTime->lessThanOrEqualTo($standardTime) ? 'on-time' : 'late';
+            }
+        }
+
+        return $statuses;
+    }
+
+    /**
+     * Filter attendance records by a specific date or date range.
+     *
+     * @param  string  $startDate
+     * @param  string|null  $endDate
+     * @return array
+     */
+    public function filterAttendanceByDate(string $startDate, string $endDate = null)
+    {
+        $queryParams = [
+            'date_from' => $startDate,
+            'date_to' => $endDate ?? $startDate,
+        ];
+
+        return $this->getAttendanceRecords($queryParams);
+    }
+
+
+
+
+    /**
+     * Handle API error responses.
+     *
+     * @param  \Illuminate\Http\Client\Response  $response
+     * @return array
+     * @throws \Exception
+     */
+    protected function handleError($response)
+    {
+        throw new \Exception('API Error: ' . $response->body());
+    }
+}

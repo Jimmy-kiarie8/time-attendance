@@ -1,0 +1,122 @@
+[
+    {
+        "label": "Employee Code",
+        "value": "",
+        "model": "emp_code",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Attendance_Date",
+        "value": "",
+        "model": "date",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "First name",
+        "value": "",
+        "model": "first_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Last name",
+        "value": "",
+        "model": "last_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Department",
+        "value": "",
+        "model": "department",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Punch time",
+        "value": "",
+        "model": "punch_time",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Check in Time",
+        "value": "",
+        "model": "checkin_time",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Check out Time",
+        "value": "",
+        "model": "checkout_time",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Check in status",
+        "value": "",
+        "model": "checkin_status",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "checkout_status",
+        "value": "",
+        "model": "checkout_status",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Status",
+        "value": "",
+        "model": "status",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "worked_hours",
+        "value": "",
+        "model": "worked_hours",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

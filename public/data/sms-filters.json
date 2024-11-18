@@ -1,0 +1,23 @@
+[
+    {
+        "label": "Start Date",
+        "model": "start_date",
+        "value": "",
+        "type": "date",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    },
+    {
+        "label": "End Date",
+        "model": "end_date",
+        "value": "",
+        "type": "date",
+        "display": true,
+        "table_display": true,
+        "col": 6,
+        "items": []
+    }
+]
+

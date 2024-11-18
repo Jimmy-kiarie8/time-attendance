@@ -1,0 +1,69 @@
+[
+    {
+        "label": "Sms",
+        "model": "sms",
+        "value": "All",
+        "type": "select",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": ["All", "Contact"]
+    },
+    {
+        "label": "Phone",
+        "model": "phone",
+        "value": "",
+        "type": "text",
+        "display": false,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Borrower",
+        "model": "client_id",
+        "value": null,
+        "type": "select",
+        "display": true,
+        "multiple": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Message",
+        "model": "message",
+        "value": "",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Status",
+        "model": "result",
+        "value": "",
+        "type": "text",
+        "display": false,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Status",
+        "model": "error",
+        "value": "",
+        "type": "text",
+        "display": false,
+        "table_display": false,
+        "col": 12,
+        "items": []
+    }
+]
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+[
+
+    {
+        "label": "Logbook",
+        "value": null,
+        "model": "logbook",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": true,
+        "items": []
+    },
+    {
+        "label": "Cheque",
+        "value": null,
+        "model": "cheque",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    },
+    {
+        "label": "Cash",
+        "value": null,
+        "model": "cash",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    },
+    {
+        "label": "Chattels",
+        "value": null,
+        "model": "chattels",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    },
+    {
+        "label": "TitleDeed",
+        "value": null,
+        "model": "titleDeed",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    },
+    {
+        "label": "Payslip",
+        "value": null,
+        "model": "payslip",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    },
+    {
+        "label": "Passport",
+        "value": null,
+        "model": "Passport_photo",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    },
+    {
+        "label": "Application Form",
+        "value": null,
+        "model": "Application_form",
+
+        "type": "file",
+        "display": true,
+        "table_display": false,
+        "multiple": false,
+        "disabled": false,
+        "col": 2,
+        "accept": ".pdf,.doc,.docx",
+        "required": false,
+        "items": []
+    }
+]

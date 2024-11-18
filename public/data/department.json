@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Name",
+        "value": "",
+        "model": "dept_name",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    },
+    {
+        "label": "Location",
+        "value": "",
+        "model": "location",
+        "type": "text",
+        "display": true,
+        "table_display": true,
+        "col": 12,
+        "items": []
+    }
+]

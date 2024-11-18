@@ -32,6 +32,7 @@ class AttendanceLogController extends  BaseController
         $this->filterFile = 'filters.json';
         $this->queryParams = [
             'start_time' => Carbon::today()->toDateTimeString(),
+            "page_size" => 150
         ];
         $this->actions = [
             // ['action_name' => 'Edit', 'icon' => 'mdi-pencil', 'color' => 'primary', 'route' => 'loans'],

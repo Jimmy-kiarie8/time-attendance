@@ -144,52 +144,6 @@ export default {
                     return "";
             }
         },
-        async downloadReport1(filetype) {
-            this.loading = true
-            try {
-                const transformedData = this.form_data.reduce((acc, item) => {
-                    // Use the model as the key and assign the value
-                    acc[item.model] = {
-                        label: item.label,
-                        value: item.value
-                    };
-                    return acc;
-                }, {});
-
-                // Make a POST request to your Laravel backend to initiate file download
-                const response = await axios.post(`/admin/reports/download?filetype=${filetype}`, transformedData, {
-                    responseType: 'blob'  // Set responseType to blob for downloading files
-                });
-
-                // return response;
-
-                // Create a Blob from the file stream
-                const blob = new Blob([response.data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-
-                // Create a link element to trigger the download
-                const url = window.URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-
-                if (filetype === 'pdf') {
-                    link.setAttribute('download', `Report_${new Date().toISOString()}.pdf`);
-                } else {
-                    link.setAttribute('download', `Report_${new Date().toISOString()}.xlsx`);
-                }
-                document.body.appendChild(link);
-                link.click();
-
-                // Clean up
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
-                this.loading = false
-            } catch (error) {
-                this.loading = false
-                console.error('Error downloading report:', error);
-                // Handle error if needed
-            }
-        },
-
         async downloadReport(filetype) {
             this.loading = true;
             try {

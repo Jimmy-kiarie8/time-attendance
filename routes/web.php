@@ -76,7 +76,7 @@ Route::middleware([
     Route::get('/json-data', [HomeController::class, 'jsonData']);
 
 
-    Route::get('/reports', [ReportController::class, 'index']);
+    Route::get('/system-reports', [ReportController::class, 'index']);
 
 
     Route::post('/report', [ReportController::class, 'generate']);

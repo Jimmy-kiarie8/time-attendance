@@ -152,7 +152,7 @@ class ZKTecoService
     {
 
         // return ['data' => []];
-        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/employees/");
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/employees/", $queryParams);
         // return $response->successful() ? $response->json() : $this->handleError($response);
 
         if ($response->successful()) {
@@ -239,10 +239,6 @@ class ZKTecoService
      */
     public function getAttendanceRecords($queryParams = [], $perPage = 150, $page = 1)
     {
-        Log::error('Sending Attendance API request', [
-            'url' => "{$this->baseUrl}/iclock/api/transactions/",
-            'queryParams' => $queryParams,
-        ]);
 
         $allTransactions = [];
         $nextUrl = null;

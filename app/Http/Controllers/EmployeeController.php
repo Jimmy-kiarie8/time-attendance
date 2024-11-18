@@ -28,6 +28,7 @@ class EmployeeController extends BaseController
         $this->upload = false;
         $this->apiFun = 'getEmployees';
         $this->create = true;
+        $this->queryParams = ["page_size" => 150];
 
 
         $this->actions = [
@@ -44,6 +45,7 @@ class EmployeeController extends BaseController
 
         return  $this->zkTecoService->createEmployee($data);
     }
+
 
     public function deleteBio(Request $request)
     {

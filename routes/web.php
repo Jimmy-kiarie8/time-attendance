@@ -62,6 +62,8 @@ Route::middleware([
 
     Route::post('/reverse/{id}', [TransactionController::class, 'reverse']);
 
+    Route::post('/getEmployees/{id}', [EmployeeController::class, 'getEmployees']);
+
 
     Route::post('/sync-employee', [EmployeeController::class, 'sync']);
     Route::post('/delete-bio', [EmployeeController::class, 'deleteBio']);

@@ -14,10 +14,30 @@ class DashboardService
     public function __construct()
     {
         $this->baseUrl = config('zkteco.base_url');
+        $this->authenticate();
         // $this->token = config('services.zkteco.token');
-        $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
+        // $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
     }
 
+
+    /**
+     * Authenticate and retrieve a JWT token.
+     */
+    protected function authenticate()
+    {
+        $response = Http::post("{$this->baseUrl}/jwt-api-token-auth/", [
+            'username' => config('zkteco.username'),
+            'password' => config('zkteco.password'),
+        ]);
+
+        if ($response->successful()) {
+            $this->token = $response->json('token');
+
+            // Log::alert($this->token);
+        } else {
+            throw new \Exception('Authentication failed.');
+        }
+    }
     /**
      * Get daily attendance counts for the last 7 days
      */

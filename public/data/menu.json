@@ -42,7 +42,7 @@
     },
     {
         "text": "Reports",
-        "link": "/reports",
+        "link": "/system-reports",
         "icon": "mdi-chart-areaspline",
         "hasSub": false,
         "permission": "View Reports",

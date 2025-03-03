@@ -5,6 +5,7 @@ namespace App\Services;
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class DashboardService
 {
@@ -18,7 +19,6 @@ class DashboardService
         // $this->token = config('services.zkteco.token');
         // $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
     }
-
 
     /**
      * Authenticate and retrieve a JWT token.
@@ -43,8 +43,8 @@ class DashboardService
      */
     public function getDailyAttendanceChart()
     {
-        $endDate = Carbon::tomorrow();
-        $startDate = Carbon::now()->subMonth();
+        $endDate = Carbon::now()->endOfDay();
+        $startDate = Carbon::now()->subMonth()->startOfDay();
         $period = CarbonPeriod::create($startDate, $endDate);
 
         $dates = [];
@@ -193,6 +193,7 @@ class DashboardService
             ]);
 
         $transactions = $response->json()['data'] ?? [];
+        Log::info($transactions);
 
         foreach ($transactions as $transaction) {
             $hour = Carbon::parse($transaction['punch_time'])->hour;

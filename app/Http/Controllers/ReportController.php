@@ -131,9 +131,6 @@ class ReportController extends Controller
         $viewPath = 'reports.report';
         $company = Company::first();
 
-
-
-
         $total = 0;
         $pdf = PDF::loadView($viewPath, [
             'data' => $data['data'],
@@ -142,7 +139,7 @@ class ReportController extends Controller
             'total' => $total,
             'company' => $company,
             'report_type' => $report_type
-        ]);
+        ])->setPaper('a4', 'landscape');
 
         return $pdf->stream(env('APP_NAME') . ' ' . now()->format('Y-m-d') . ' Report.pdf');
     }

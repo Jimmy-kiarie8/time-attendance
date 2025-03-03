@@ -280,28 +280,48 @@ class ZKTecoService
         });
 
         foreach ($groupedTransactions as $key => $dayTransactions) {
+            Log::info('Processing day: ' . json_encode($dayTransactions->first()));
             [$empCode, $date] = explode('_', $key);
             $dateCarbon = Carbon::parse($date);
+            
+            // Get the department from the first transaction to determine if it's a rider
+            $firstTransaction = $dayTransactions->first();
+            $isRider = $firstTransaction && strtoupper($firstTransaction['department']) === 'RIDER';
 
-            // Separate transactions into shifts
-            $firstShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
-                $time = Carbon::parse($transaction['punch_time'])->format('H:i');
-                return $time >= '07:00' && $time <= '17:00';
-            });
+            // Separate transactions into shifts based on department
+            if ($isRider) {
+                // For riders: check-in time is 7:30 to 17:00
+                $firstShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
+                    $time = Carbon::parse($transaction['punch_time'])->format('H:i');
+                    return $time >= '07:30' && $time <= '17:00';
+                });
 
-            $secondShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
-                $time = Carbon::parse($transaction['punch_time'])->format('H:i');
-                return $time >= '16:00' || $time <= '06:59';
-            });
+                $shifts = [
+                    ['transactions' => $firstShiftTransactions, 'name' => 'Rider Shift', 'check_in' => '07:30', 'check_out' => '17:00']
+                ];
+            } else {
+                // For regular employees: first shift 9:00 to 17:00, second shift 17:00 to 9:00 the following day
+                $firstShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
+                    $time = Carbon::parse($transaction['punch_time'])->format('H:i');
+                    return $time >= '07:00' && $time <= '17:00';
+                });
 
-            $shifts = [
-                ['transactions' => $firstShiftTransactions, 'name' => 'First Shift'],
-                ['transactions' => $secondShiftTransactions, 'name' => 'Second Shift']
-            ];
+                $secondShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
+                    $time = Carbon::parse($transaction['punch_time'])->format('H:i');
+                    return $time >= '16:00' || $time <= '06:59';
+                });
+
+                $shifts = [
+                    ['transactions' => $firstShiftTransactions, 'name' => 'First Shift', 'check_in' => '09:00', 'check_out' => '17:00'],
+                    ['transactions' => $secondShiftTransactions, 'name' => 'Second Shift', 'check_in' => '17:00', 'check_out' => '09:00']
+                ];
+            }
 
             foreach ($shifts as $shift) {
                 $shiftTransactions = $shift['transactions'];
                 $shiftName = $shift['name'];
+                $expectedCheckInTime = $shift['check_in'];
+                $expectedCheckOutTime = $shift['check_out'];
 
                 if ($shiftTransactions->isEmpty()) {
                     continue;
@@ -332,17 +352,21 @@ class ZKTecoService
                     }
                 }
 
-                // Determine late status based on shift
-                $lateThreshold = $shiftName === 'First Shift' ? '09:00' : '17:00';
+                // Determine late status based on shift and department
+                $lateThreshold = $expectedCheckInTime;
 
+                // For second shift, check if checkout time is on the next day
+                $isSecondShift = $shiftName === 'Second Shift';
+                $checkoutThreshold = $expectedCheckOutTime;
+                
                 $checkinStatus = $checkInTime
                     ? ($checkInTime->format('H:i') <= $lateThreshold ? 'On time' : 'Late')
                     : 'Missing';
 
                 $checkoutStatus = $checkOutTime
-                    ? ($shiftName === 'First Shift'
-                        ? ($checkOutTime->format('H:i') >= '17:00' ? 'On time' : 'Early')
-                        : ($checkOutTime->format('H:i') >= '06:59' ? 'On time' : 'Early'))
+                    ? ($isSecondShift
+                        ? ($checkOutTime->format('H:i') >= $checkoutThreshold ? 'On time' : 'Early')
+                        : ($checkOutTime->format('H:i') >= $checkoutThreshold ? 'On time' : 'Early'))
                     : 'Missing';
 
                 // Create single record for the shift
@@ -355,7 +379,9 @@ class ZKTecoService
                     'last_name' => $firstPunch['last_name'],
                     'department' => $firstPunch['department'],
                     'position' => $firstPunch['position'],
+                    'expected_check_in_time' => $expectedCheckInTime,
                     'checkin_time' => $checkInTime ? $checkInTime->format('H:i:s') : null,
+                    'expected_check_out_time' => $expectedCheckOutTime,
                     'checkout_time' => $checkOutTime ? $checkOutTime->format('H:i:s') : null,
                     'status' => $checkInTime ? ($checkOutTime ? 'Out' : 'In') : 'Absent',
                     'checkin_status' => $checkinStatus,
@@ -385,6 +411,34 @@ class ZKTecoService
         );
     }
 
+
+    public function getEmployeeAttendance(int $employeeId, $perPage = 150, $page = 1)
+    {
+        /**
+         * Retrieve a specific employee's attendance.
+         *
+         * @param  int  $employeeId
+         * @return array
+         */
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/iclock/api/transactions/{$employeeId}");
+        // return $response->successful() ? $response->json() : $this->handleError($response);
+
+        if ($response->successful()) {
+            $transactions = $response->json('data');
+            $total = $response->json('count');  // Assuming API returns the total count of transactions
+
+            // Create a LengthAwarePaginator instance to paginate the data
+            return new LengthAwarePaginator(
+                array_slice($transactions, ($page - 1) * $perPage, $perPage), // Slice the data for current page
+                $total, // Total number of items (count from API)
+                $perPage, // Items per page
+                $page, // Current page
+                ['path' => url()->current()] // For pagination links
+            );
+        } else {
+            $this->handleError($response);
+        }
+    }
 
     public function generateReport(string $reportType, bool $export = false, $queryParams)
     {
@@ -433,38 +487,6 @@ class ZKTecoService
 
         return $trendData;
     }
-
-
-    /**
-     * Retrieve a specific employee's attendance.
-     *
-     * @param  int  $employeeId
-     * @return array
-     */
-    public function getEmployeeAttendance(int $employeeId, $perPage = 150, $page = 1)
-    {
-        $response = Http::withToken($this->token)->get("{$this->baseUrl}/iclock/api/transactions/{$employeeId}");
-        // return $response->successful() ? $response->json() : $this->handleError($response);
-
-        if ($response->successful()) {
-            $transactions = $response->json('data');
-            $total = $response->json('count');  // Assuming API returns the total count of transactions
-
-            // Create a LengthAwarePaginator instance to paginate the data
-            return new LengthAwarePaginator(
-                array_slice($transactions, ($page - 1) * $perPage, $perPage), // Slice the data for current page
-                $total, // Total number of items (count from API)
-                $perPage, // Items per page
-                $page, // Current page
-                ['path' => url()->current()] // For pagination links
-            );
-        } else {
-            $this->handleError($response);
-        }
-    }
-
-
-
 
     /**
      * Get user attendance status as on-time, late, or absent.

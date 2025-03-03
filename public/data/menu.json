@@ -49,6 +49,23 @@
         "subMenu": []
     },
     {
+        "text": "Users",
+        "link": "#",
+        "icon": "mdi-account",
+        "hasSub": true,
+        "permission": "View Users",
+        "subMenu": [
+            {
+                "text": "Users",
+                "link": "/users",
+                "icon": "mdi-account-circle",
+                "hasSub": true,
+                "permission": "View Reports",
+                "subMenu": []
+            }
+        ]
+    }
+    {
         "text": "Settings",
         "link": "#",
         "icon": "mdi-cog",

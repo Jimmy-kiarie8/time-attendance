@@ -16,7 +16,6 @@ class ZKTecoService
     {
         $this->baseUrl = config('zkteco.base_url');
         $this->authenticate();
-        // $this->token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMxNzQyMzQwLCJpYXQiOjE3MzE2NTU5NDAsImp0aSI6ImQzMzQ0MjhmNGJmMTQ0NGM5NWNmMmI5OTcyNWExMzU1IiwidXNlcl9pZCI6MX0.xY9YsZiParq6U_d84fyRLvcZBpSkAOeb9MtW3owg4hE';
     }
 
     /**
@@ -231,6 +230,7 @@ class ZKTecoService
             throw $th;
         }
     }
+
     /**
      * Get attendance records.
      *
@@ -239,7 +239,6 @@ class ZKTecoService
      */
     public function getAttendanceRecords($queryParams = [], $perPage = 150, $page = 1)
     {
-
         $allTransactions = [];
         $nextUrl = null;
 
@@ -284,56 +283,88 @@ class ZKTecoService
             [$empCode, $date] = explode('_', $key);
             $dateCarbon = Carbon::parse($date);
 
-            // Sort transactions for this employee and date by punch time
-            $sortedTransactions = collect($dayTransactions)->sortBy('punch_time');
+            // Separate transactions into shifts
+            $firstShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
+                $time = Carbon::parse($transaction['punch_time'])->format('H:i');
+                return $time >= '07:00' && $time <= '17:00';
+            });
 
-            // Get first and last punch of the day
-            $firstPunch = $sortedTransactions->first();
-            $lastPunch = $sortedTransactions->last();
+            $secondShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
+                $time = Carbon::parse($transaction['punch_time'])->format('H:i');
+                return $time >= '16:00' || $time <= '06:59';
+            });
 
-            $checkInTime = $firstPunch ? Carbon::parse($firstPunch['punch_time']) : null;
-            $checkOutTime = ($lastPunch && $lastPunch['id'] !== $firstPunch['id'])
-                ? Carbon::parse($lastPunch['punch_time'])
-                : null;
-            $workedHours = null;
-            if ($checkInTime && $checkOutTime) {
-                $totalMinutes = $checkInTime->diffInMinutes($checkOutTime); // Get total minutes
-                $hours = intdiv($totalMinutes, 60); // Extract hours
-                $minutes = $totalMinutes % 60; // Extract remaining minutes
-
-                if ($hours > 0) {
-                    $workedHours = $hours . ' hr' . ($hours > 1 ? 's' : '') . ' ' . ($minutes > 0 ? $minutes . ' min' : '');
-                } else {
-                    $workedHours = $minutes . ' min';
-                }
-            }
-            // Determine check-in and check-out status
-            $checkinStatus = $checkInTime
-                ? ($checkInTime->format('H:i') <= '09:30' ? 'On time' : 'Late')
-                : 'Missing';
-
-            $checkoutStatus = $checkOutTime
-                ? ($checkOutTime->format('H:i') >= '17:00' ? 'On time' : 'Early')
-                : 'Missing';
-
-            // Create single record for the day
-            $dayRecord = [
-                'id' => $firstPunch['id'],
-                'emp_code' => $empCode,
-                'date' => $date,
-                'first_name' => $firstPunch['first_name'],
-                'last_name' => $firstPunch['last_name'],
-                'department' => $firstPunch['department'],
-                'position' => $firstPunch['position'],
-                'checkin_time' => $checkInTime ? $checkInTime->format('H:i:s') : null,
-                'checkout_time' => $checkOutTime ? $checkOutTime->format('H:i:s') : null,
-                'status' => $checkInTime ? ($checkOutTime ? 'Out' : 'In') : 'Absent',
-                'checkin_status' => $checkinStatus,
-                'checkout_status' => $checkoutStatus,
-                'worked_hours' => $workedHours ? $workedHours : null,
+            $shifts = [
+                ['transactions' => $firstShiftTransactions, 'name' => 'First Shift'],
+                ['transactions' => $secondShiftTransactions, 'name' => 'Second Shift']
             ];
 
-            $processedData[] = $dayRecord;
+            foreach ($shifts as $shift) {
+                $shiftTransactions = $shift['transactions'];
+                $shiftName = $shift['name'];
+
+                if ($shiftTransactions->isEmpty()) {
+                    continue;
+                }
+
+                // Sort transactions for this shift by punch time
+                $sortedTransactions = $shiftTransactions->sortBy('punch_time');
+
+                // Get first and last punch of the shift
+                $firstPunch = $sortedTransactions->first();
+                $lastPunch = $sortedTransactions->last();
+
+                $checkInTime = $firstPunch ? Carbon::parse($firstPunch['punch_time']) : null;
+                $checkOutTime = ($lastPunch && $lastPunch['id'] !== $firstPunch['id'])
+                    ? Carbon::parse($lastPunch['punch_time'])
+                    : null;
+
+                $workedHours = null;
+                if ($checkInTime && $checkOutTime) {
+                    $totalMinutes = $checkInTime->diffInMinutes($checkOutTime);
+                    $hours = intdiv($totalMinutes, 60);
+                    $minutes = $totalMinutes % 60;
+
+                    if ($hours > 0) {
+                        $workedHours = $hours . ' hr' . ($hours > 1 ? 's' : '') . ' ' . ($minutes > 0 ? $minutes . ' min' : '');
+                    } else {
+                        $workedHours = $minutes . ' min';
+                    }
+                }
+
+                // Determine late status based on shift
+                $lateThreshold = $shiftName === 'First Shift' ? '09:00' : '17:00';
+
+                $checkinStatus = $checkInTime
+                    ? ($checkInTime->format('H:i') <= $lateThreshold ? 'On time' : 'Late')
+                    : 'Missing';
+
+                $checkoutStatus = $checkOutTime
+                    ? ($shiftName === 'First Shift'
+                        ? ($checkOutTime->format('H:i') >= '17:00' ? 'On time' : 'Early')
+                        : ($checkOutTime->format('H:i') >= '06:59' ? 'On time' : 'Early'))
+                    : 'Missing';
+
+                // Create single record for the shift
+                $shiftRecord = [
+                    'id' => $firstPunch['id'],
+                    'emp_code' => $empCode,
+                    'date' => $date,
+                    'shift' => $shiftName,
+                    'first_name' => $firstPunch['first_name'],
+                    'last_name' => $firstPunch['last_name'],
+                    'department' => $firstPunch['department'],
+                    'position' => $firstPunch['position'],
+                    'checkin_time' => $checkInTime ? $checkInTime->format('H:i:s') : null,
+                    'checkout_time' => $checkOutTime ? $checkOutTime->format('H:i:s') : null,
+                    'status' => $checkInTime ? ($checkOutTime ? 'Out' : 'In') : 'Absent',
+                    'checkin_status' => $checkinStatus,
+                    'checkout_status' => $checkoutStatus,
+                    'worked_hours' => $workedHours,
+                ];
+
+                $processedData[] = $shiftRecord;
+            }
         }
 
         // Sort the processed data by date
@@ -354,6 +385,7 @@ class ZKTecoService
         );
     }
 
+
     public function generateReport(string $reportType, bool $export = false, $queryParams)
     {
         switch ($reportType) {
@@ -373,7 +405,7 @@ class ZKTecoService
         $trendData = [];
 
         foreach ($attendances as $attendance) {
-            $status = $this->zkTecoService->getUserStatus($attendance);
+            $status = $this->getUserStatus($attendance);
             $date = $attendance->date->format('Y-m-d');
             if (!isset($trendData[$date])) {
                 $trendData[$date] = [

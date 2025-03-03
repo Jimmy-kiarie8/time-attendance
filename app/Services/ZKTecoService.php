@@ -369,7 +369,7 @@ class ZKTecoService
 
         // Sort the processed data by date
         $processedData = collect($processedData)
-            ->sortBy('date')
+            ->sortByDesc('date')
             ->values()
             ->all();
 

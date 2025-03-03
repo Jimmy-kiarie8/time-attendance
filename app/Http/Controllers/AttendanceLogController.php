@@ -19,7 +19,7 @@ class AttendanceLogController extends  BaseController
     public function __construct()
     {
         $this->modelClass = AttendanceLog::class;
-        $this->model = AttendanceLog::with(['employee:id,employee_id,name']);
+        $this->model = AttendanceLog::latest()->with(['employee:id,employee_id,name']);
         $this->json = 'attendance-logs.json';
         $this->title = 'Attendance';
         $this->route = 'attendance';

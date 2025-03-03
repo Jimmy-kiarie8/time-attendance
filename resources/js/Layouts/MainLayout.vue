@@ -128,7 +128,93 @@ const hints = ref(true)
 
 // Refs
 const drawer = ref(true);
-const links = ref([]);
+// const links = ref([]);
+const links = [
+    {
+        "text": "Dashboard",
+        "link": "/",
+        "icon": "mdi-view-dashboard",
+        "hasSub": false,
+        "permission": "View Dashboard",
+        "subMenu": []
+    },
+    {
+        "text": "Master Records",
+        "link": "#",
+        "icon": "mdi-account",
+        "hasSub": true,
+        "permission": "View Users",
+        "subMenu": [
+            {
+                "text": "Employees",
+                "link": "/employees",
+                "icon": "mdi-account-circle",
+                "hasSub": false,
+                "permission": "View Clients",
+                "subMenu": []
+            },
+            {
+                "text": "Attendance",
+                "link": "/attendance",
+                "icon": "mdi-chart-areaspline",
+                "hasSub": false,
+                "permission": "View Clients",
+                "subMenu": []
+            },
+            {
+                "text": "Departments",
+                "link": "/departments",
+                "icon": "mdi-card-account-details",
+                "hasSub": false,
+                "permission": "View Clients",
+                "subMenu": []
+            }
+        ]
+    },
+    {
+        "text": "Reports",
+        "link": "/system-reports",
+        "icon": "mdi-chart-areaspline",
+        "hasSub": false,
+        "permission": "View Reports",
+        "subMenu": []
+    },
+    {
+        "text": "Users",
+        "link": "#",
+        "icon": "mdi-account",
+        "hasSub": true,
+        "permission": "View Users",
+        "subMenu": [
+            {
+                "text": "Users",
+                "link": "/users",
+                "icon": "mdi-account-circle",
+                "hasSub": true,
+                "permission": "View Reports",
+                "subMenu": []
+            }
+        ]
+    },
+    {
+        "text": "Settings",
+        "link": "#",
+        "icon": "mdi-cog",
+        "hasSub": true,
+        "permission": "View Users",
+        "subMenu": [
+            {
+                "text": "Settings",
+                "link": "/settings",
+                "icon": "mdi-cog",
+                "hasSub": true,
+                "permission": "View Reports",
+                "subMenu": []
+            }
+        ]
+    }
+]
+
 const company = ref({});
 const snackbar = ref({
     show: false,
@@ -202,7 +288,7 @@ onMounted(() => {
     }
 
     // Load initial data
-    loadJsonData();
+    // loadJsonData();
     getCompany();
 
 

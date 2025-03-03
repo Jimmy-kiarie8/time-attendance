@@ -44,7 +44,7 @@ class DashboardService
     public function getDailyAttendanceChart()
     {
         $endDate = Carbon::tomorrow();
-        $startDate = Carbon::now()->subDays(6);
+        $startDate = Carbon::now()->subMonth();
         $period = CarbonPeriod::create($startDate, $endDate);
 
         $dates = [];

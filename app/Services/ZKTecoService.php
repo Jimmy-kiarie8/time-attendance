@@ -391,8 +391,8 @@ class ZKTecoService
         switch ($reportType) {
             case 'attendance':
                 return $this->getAttendanceRecords($queryParams);
-            case 'LoanListing':
-                //
+            case 'workingHours':
+                // return $this->workingHours($queryParams);
             default:
                 throw new \InvalidArgumentException("Invalid report type: {$reportType}");
         }

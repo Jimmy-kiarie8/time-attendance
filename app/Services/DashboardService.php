@@ -189,7 +189,8 @@ class DashboardService
         $response = Http::withToken($this->token)
             ->get("{$this->baseUrl}/iclock/api/transactions/", [
                 'start_time' => Carbon::today()->startOfDay()->toDateTimeString(),
-                'end_time' => Carbon::today()->endOfDay()->toDateTimeString()
+                'end_time' => Carbon::today()->endOfDay()->toDateTimeString(),
+                'page_size' => 200
             ]);
 
         $transactions = $response->json()['data'] ?? [];

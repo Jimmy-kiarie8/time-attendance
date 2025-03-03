@@ -132,15 +132,6 @@ class ReportController extends Controller
         $company = Company::first();
 
 
-        if ($report_type === 'LoanAnalysis') {
-            $viewPath = 'reports.loan-analysis';
-            $pdf = PDF::loadView($viewPath, [
-                'report' => $data,
-                'filetype' => 'pdf',
-            ])->setPaper('a4', 'landscape');
-
-            return $pdf->stream(env('APP_NAME') . ' ' . now()->format('Y-m-d') . ' Report.pdf');
-        }
 
 
         $total = 0;

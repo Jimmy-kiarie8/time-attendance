@@ -392,10 +392,24 @@ class ZKTecoService
             case 'attendance':
                 return $this->getAttendanceRecords($queryParams);
             case 'workingHours':
-                // return $this->workingHours($queryParams);
+                return $this->getAttendanceRecords($queryParams);
             default:
                 throw new \InvalidArgumentException("Invalid report type: {$reportType}");
         }
+    }
+
+    public function onTimeWorkingHours($queryParams)
+    {
+        $attendances = $this->getAttendanceRecords($queryParams);
+        $onTimeWorkingHours = 0;
+
+        foreach ($attendances as $attendance) {
+            if ($this->getUserStatus($attendance) === 'On time') {
+                $onTimeWorkingHours += $attendance->worked_hours;
+            }
+        }
+
+        return $onTimeWorkingHours;
     }
 
 

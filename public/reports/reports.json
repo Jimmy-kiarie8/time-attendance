@@ -12,10 +12,6 @@
             {
                 "label": "Attendance Report",
                 "value": "attendance"
-            },
-            {
-                "label": "On-Time Performance Report",
-                "value": "workingHours"
             }
         ]
     },

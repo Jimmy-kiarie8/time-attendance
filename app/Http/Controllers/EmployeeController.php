@@ -12,6 +12,7 @@ use App\Services\ZKTecoService;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Log;
 
 class EmployeeController extends BaseController
 {
@@ -46,6 +47,56 @@ class EmployeeController extends BaseController
         return  $this->zkTecoService->createEmployee($data);
     }
 
+
+    public function edit($id)
+    {
+        $zkt = new ZKTecoService;
+        $employee = $zkt->getEmployeeById($id);
+
+        // Add detailed logging to debug the response
+        Log::info('Employee data from API:', [
+            'employee' => $employee,
+            'employee_type' => gettype($employee),
+            'employee_keys' => is_array($employee) || is_object($employee) ? array_keys((array)$employee) : 'Not an array or object'
+        ]);
+
+        // Convert the employee data to an object if it's an array
+        if (is_array($employee)) {
+            $employee = json_decode(json_encode($employee));
+        }
+
+        Log::info('Employee data after conversion:', [
+            'employee_type' => gettype($employee),
+            'employee_keys' => is_object($employee) ? get_object_vars($employee) : 'Not an object'
+        ]);
+
+        // Fetch departments and areas from API
+        $departments = $zkt->getDepartments();
+        $areas = $zkt->getAreas();
+        
+        Log::info('Departments from API:', [
+            'count' => is_array($departments) ? count($departments) : 'not an array',
+            'sample' => is_array($departments) && !empty($departments) ? $departments[0] : 'no sample'
+        ]);
+        Log::info('Areas from API:', [
+            'count' => is_array($areas) ? count($areas) : 'not an array',
+            'sample' => is_array($areas) && !empty($areas) ? $areas[0] : 'no sample'
+        ]);
+
+        $jsonFile = public_path('data/' . $this->json); // Get the full path to the JSON file
+
+        $trans = new DataTransformService;
+        $formData = $trans->data_edit_transform($jsonFile, $employee, $departments, $areas);
+
+        return $formData;
+        // Return the Inertia view with the form data
+        return Inertia::render('Views/form', [
+            'title' => $this->title,
+            'route' => $this->route,
+            'formData' => $formData,
+            'id' => $id
+        ]);
+    }
 
     public function deleteBio(Request $request)
     {

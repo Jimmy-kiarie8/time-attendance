@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 use Illuminate\Support\Str;
@@ -61,7 +62,11 @@ abstract class BaseController extends Controller
         }
 
 
+
+
+
         if (request('axios')) {
+            $data = $zkTecoService->{$this->apiFun}($this->queryParams); // Call the method dynamically
             // return $this->model->paginate(100);
         }
         // $data = $this->model->latest()->paginate(100);
@@ -97,7 +102,7 @@ abstract class BaseController extends Controller
                 ];
             }
         }
-        // $headers[] = ['title' => 'Actions', 'key' => 'actions'];
+        $headers[] = ['title' => 'Actions', 'key' => 'actions'];
 
         $filterData = null;
         if ($this->canFilter) {

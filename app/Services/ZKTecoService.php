@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Models\AttendanceLog;
+use App\Models\Employee;
 use Carbon\Carbon;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Http;
@@ -119,6 +121,32 @@ class ZKTecoService
         return $transactions;
     }
 
+    public function getEmployeeById($id)
+    {
+        Log::info("Fetching employee with ID: {$id}", ['url' => "{$this->baseUrl}/personnel/api/employees/{$id}/"]);
+
+        $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/employees/{$id}/");
+
+        Log::alert($this->token);
+        Log::info("API Response for employee {$id}:", [
+            'status' => $response->status(),
+            'body' => $response->body(),
+            'json' => $response->json()
+        ]);
+
+        if ($response->successful()) {
+            // Check if the response is HTML (indicating an error page)
+            if (strpos($response->body(), '<!DOCTYPE HTML>') !== false) {
+                Log::error("API returned HTML instead of JSON for employee {$id}");
+                return null;
+            }
+
+            // Return the entire response body
+            return $response->json();
+        }
+
+        return $this->handleError($response);
+    }
 
     public function getEmployeeData($queryParams = [], $perPage = 150, $page = 1)
     {
@@ -283,13 +311,14 @@ class ZKTecoService
             Log::info('Processing day: ' . json_encode($dayTransactions->first()));
             [$empCode, $date] = explode('_', $key);
             $dateCarbon = Carbon::parse($date);
-            
+
             // Get the department from the first transaction to determine if it's a rider
             $firstTransaction = $dayTransactions->first();
             $isRider = $firstTransaction && strtoupper($firstTransaction['department']) === 'RIDER';
+            $isCarWash = $firstTransaction && strtoupper($firstTransaction['department']) === 'CAR WASH';
 
             // Separate transactions into shifts based on department
-            if ($isRider) {
+            if ($isRider || $isCarWash) {
                 // For riders: check-in time is 7:30 to 17:00
                 $firstShiftTransactions = collect($dayTransactions)->filter(function ($transaction) {
                     $time = Carbon::parse($transaction['punch_time'])->format('H:i');
@@ -358,21 +387,17 @@ class ZKTecoService
                 // For second shift, check if checkout time is on the next day
                 $isSecondShift = $shiftName === 'Second Shift';
                 $checkoutThreshold = $expectedCheckOutTime;
-                
-                $checkinStatus = $checkInTime
-                    ? ($checkInTime->format('H:i') <= $lateThreshold ? 'On time' : 'Late')
-                    : 'Missing';
 
-                $checkoutStatus = $checkOutTime
-                    ? ($isSecondShift
-                        ? ($checkOutTime->format('H:i') >= $checkoutThreshold ? 'On time' : 'Early')
-                        : ($checkOutTime->format('H:i') >= $checkoutThreshold ? 'On time' : 'Early'))
-                    : 'Missing';
+                $checkinStatus = $this->calculateCheckInStatus($checkInTime, $lateThreshold);
+                $checkoutStatus = $this->calculateCheckOutStatus($checkOutTime, $checkoutThreshold, $isSecondShift);
+
+                $inTimeDifference = $this->calculateTimeDifference($expectedCheckInTime, $checkInTime);
+                $outTimeDifference = $this->calculateTimeDifference($expectedCheckOutTime, $checkOutTime);
 
                 // Create single record for the shift
                 $shiftRecord = [
                     'id' => $firstPunch['id'],
-                    'emp_code' => $empCode,
+                    'emp_code' => $firstPunch['emp_code'],
                     'date' => $date,
                     'shift' => $shiftName,
                     'first_name' => $firstPunch['first_name'],
@@ -381,8 +406,10 @@ class ZKTecoService
                     'position' => $firstPunch['position'],
                     'expected_check_in_time' => $expectedCheckInTime,
                     'checkin_time' => $checkInTime ? $checkInTime->format('H:i:s') : null,
+                    'time_difference' => $inTimeDifference,
                     'expected_check_out_time' => $expectedCheckOutTime,
                     'checkout_time' => $checkOutTime ? $checkOutTime->format('H:i:s') : null,
+                    'checkout_time_difference' => $outTimeDifference,
                     'status' => $checkInTime ? ($checkOutTime ? 'Out' : 'In') : 'Absent',
                     'checkin_status' => $checkinStatus,
                     'checkout_status' => $checkoutStatus,
@@ -411,6 +438,63 @@ class ZKTecoService
         );
     }
 
+    /**
+     * Calculate the check-in status based on actual and expected times
+     *
+     * @param Carbon|null $actualTime The actual check-in time
+     * @param string $thresholdTime The threshold time for being on time
+     * @return string Status (On time, Late, or Missing)
+     */
+    private function calculateCheckInStatus($actualTime, $thresholdTime)
+    {
+        if (!$actualTime) {
+            return 'Missing';
+        }
+
+        return $actualTime->format('H:i') <= $thresholdTime ? 'On time' : 'Late';
+    }
+
+    /**
+     * Calculate the check-out status based on actual and expected times
+     *
+     * @param Carbon|null $actualTime The actual check-out time
+     * @param string $thresholdTime The threshold time for being on time
+     * @param bool $isSecondShift Whether this is a second shift
+     * @return string Status (On time, Early, or Missing)
+     */
+    private function calculateCheckOutStatus($actualTime, $thresholdTime, $isSecondShift)
+    {
+        if (!$actualTime) {
+            return 'Missing';
+        }
+
+        // Both shift types use the same logic currently, but separated for future flexibility
+        return $actualTime->format('H:i') >= $thresholdTime ? 'On time' : 'Early';
+    }
+
+    /**
+     * Calculate the time difference between expected and actual times
+     *
+     * @param string $expectedTime The expected time (format: H:i)
+     * @param Carbon|null $actualTime The actual time
+     * @return string|null Formatted time difference (H:i:s) or null if actual time is missing
+     *                     Negative time indicates early arrival, positive time indicates late arrival
+     */
+    private function calculateTimeDifference($expectedTime, $actualTime)
+    {
+        if (!$actualTime) {
+            return null;
+        }
+
+        $expectedCarbon = Carbon::createFromTimeString($expectedTime);
+        $minutesDiff = $expectedCarbon->diffInMinutes($actualTime, false);
+
+        // Format with a negative sign for early arrivals
+        $prefix = $minutesDiff < 0 ? '' : '-';
+        $absoluteMinutes = abs($minutesDiff);
+
+        return $prefix . gmdate('H:i:s', $absoluteMinutes * 60);
+    }
 
     public function getEmployeeAttendance(int $employeeId, $perPage = 150, $page = 1)
     {
@@ -530,8 +614,43 @@ class ZKTecoService
         return $this->getAttendanceRecords($queryParams);
     }
 
+    // public function getDepartments()
+    // {
+    //     Log::info("Fetching all departments", ['url' => "{$this->baseUrl}/personnel/api/departments/"]);
 
+    //     $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/departments/");
 
+    //     if ($response->successful()) {
+    //         // Check if the response is HTML (indicating an error page)
+    //         if (strpos($response->body(), '<!DOCTYPE HTML>') !== false) {
+    //             Log::error("API returned HTML instead of JSON for departments");
+    //             return [];
+    //         }
+
+    //         return $response->json();
+    //     }
+
+    //     return $this->handleError($response);
+    // }
+
+    // public function getAreas()
+    // {
+    //     Log::info("Fetching all areas", ['url' => "{$this->baseUrl}/personnel/api/areas/"]);
+
+    //     $response = Http::withToken($this->token)->get("{$this->baseUrl}/personnel/api/areas/");
+
+    //     if ($response->successful()) {
+    //         // Check if the response is HTML (indicating an error page)
+    //         if (strpos($response->body(), '<!DOCTYPE HTML>') !== false) {
+    //             Log::error("API returned HTML instead of JSON for areas");
+    //             return [];
+    //         }
+
+    //         return $response->json();
+    //     }
+
+    //     return $this->handleError($response);
+    // }
 
     /**
      * Handle API error responses.

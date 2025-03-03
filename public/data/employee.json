@@ -32,7 +32,7 @@
     {
         "label": "Department",
         "value": "",
-        "model": "department.dept_name",
+        "model": "department.dept_code",
         "type": "text",
         "display": false,
         "table_display": true,

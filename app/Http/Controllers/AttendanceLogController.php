@@ -35,8 +35,8 @@ class AttendanceLogController extends  BaseController
             "page_size" => 150
         ];
         $this->actions = [
-            // ['action_name' => 'Edit', 'icon' => 'mdi-pencil', 'color' => 'primary', 'route' => 'loans'],
-            // ['action_name' => 'Delete', 'icon' => 'mdi-delete', 'color' => 'error', 'route' => 'loans'],
+            ['action_name' => 'Edit', 'icon' => 'mdi-pencil', 'color' => 'primary', 'route' => 'Attendance'],
+            ['action_name' => 'Delete', 'icon' => 'mdi-delete', 'color' => 'error', 'route' => 'Attendance'],
             // Add more actions as needed
         ];
     }

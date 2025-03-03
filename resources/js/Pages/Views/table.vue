@@ -29,14 +29,23 @@
 
             <template v-slot:item.actions="{ item }">
                 <div class="actions">
-                    <v-tooltip v-for="(button, index) in actions" :key="index" location="bottom">
+                    <!-- <v-tooltip v-for="(button, index) in actions" :key="index" location="bottom">
                         <template v-slot:activator="{ props }">
                             <v-btn icon v-bind="props" @click="runAction(item, button)" variant="text"
-                                :color="button.color" v-if="shouldShowButton(item, button)">
+                                :color="button.color">
                                 <v-icon>{{ button.icon }}</v-icon>
                             </v-btn>
                         </template>
                         <span>{{ button.action_name }}</span>
+                    </v-tooltip> -->
+                    <v-tooltip location="bottom">
+                        <template v-slot:activator="{ props }">
+                            <v-btn icon v-bind="props" variant="text"
+                                color="primary" @click="openEdit(item)">
+                                <v-icon>mdi-pen</v-icon>
+                            </v-btn>
+                        </template>
+                        <span>Edit</span>
                     </v-tooltip>
                 </div>
             </template>

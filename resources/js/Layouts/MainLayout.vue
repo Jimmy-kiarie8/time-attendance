@@ -196,23 +196,23 @@ const links = [
             }
         ]
     },
-    {
-        "text": "Settings",
-        "link": "#",
-        "icon": "mdi-cog",
-        "hasSub": true,
-        "permission": "View Users",
-        "subMenu": [
-            {
-                "text": "Settings",
-                "link": "/settings",
-                "icon": "mdi-cog",
-                "hasSub": true,
-                "permission": "View Reports",
-                "subMenu": []
-            }
-        ]
-    }
+    // {
+    //     "text": "Settings",
+    //     "link": "#",
+    //     "icon": "mdi-cog",
+    //     "hasSub": true,
+    //     "permission": "View Users",
+    //     "subMenu": [
+    //         {
+    //             "text": "Settings",
+    //             "link": "/settings",
+    //             "icon": "mdi-cog",
+    //             "hasSub": true,
+    //             "permission": "View Reports",
+    //             "subMenu": []
+    //         }
+    //     ]
+    // }
 ]
 
 const company = ref({});

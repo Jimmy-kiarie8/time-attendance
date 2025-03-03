@@ -373,7 +373,7 @@ class ZKTecoService
             ->values()
             ->all();
 
-        Log::info('Processed records', ['count' => count($processedData)]);
+        // Log::info('Processed records', ['count' => count($processedData)]);
 
         // Paginate the results
         return new LengthAwarePaginator(
